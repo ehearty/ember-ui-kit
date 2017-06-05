@@ -15,3 +15,126 @@
   @import "docs/components/ui/anchor";
   @import "docs/components/ui/button";
 }
+
+.ember-application {
+  margin: 0;
+  overflow: hidden;
+}
+
+#chrome {
+  display: flex;
+  flex-direction: column;
+}
+
+#header-1 {
+  height: 18px;
+}
+
+#content-1 {
+  height: calc(100vh - 18px);
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+.ui-table__tr.active {
+  position: relative;
+}
+
+.ui-table__tr.active .ui-table__td {
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
+.ui-table__tr.active::after {
+  content: '';
+  background: red;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+*/
+body.ember-application .ui-table__tr.active {
+}
+
+.ui-table__tr--even {
+  background: lightblue;
+}
+
+body.ember-application .ui-table {
+  width: 640px;
+  max-height: 480px;
+  margin: 50px auto;
+}
+
+body.ember-application .ui-table__thead,
+body.ember-application .ui-table__tbody,
+body.ember-application .ui-table__tfoot  {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  padding: 0 20px;
+}
+
+body.ember-application .ui-table__froze {
+}
+
+body.ember-application .ui-table__td {
+}
+
+body.ember-application .ui-table__unfroze .ui-scrollable__scroller {
+}
+
+body.ember-application .ui-table__tr {
+  height: 56px;
+}
+
+body.ember-application .ui-table__tr.active {
+}
+
+body.ember-application .ui-table__th {
+}
+
+body.ember-application .ui-table__td {
+}
+
+body.ember-application .ui-table {
+  border: 20px solid black;
+}
+
+ul {
+  margin: 0;
+  padding-left: 25px;
+}
+
+.panel {
+  max-width: 320px;
+  max-height: 480px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body.ember-application .ui-scrollable {
+}
+
+.ui-tr {
+  height: 50px;
+}
+
+.ui-table--v2 {
+  max-height: calc(100vh - 50px);
+}
+
+#ui-position {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+}
+
+#ui-position .ui-position {
+  background: lightgreen;
+}
