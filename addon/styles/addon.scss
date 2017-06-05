@@ -7,3 +7,7 @@
 @import "./components/in-toggle";
 @import "./components/in-select";
 @import "./components/x-resize";
+
+.ui-x-resize-aware {
+  position: relative;
+}
