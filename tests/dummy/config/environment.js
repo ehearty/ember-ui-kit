@@ -46,5 +46,9 @@ module.exports = function(environment) {
     ENV.rootURL = '/ember-ui-kit/';
   }
 
+  ENV['ember-cli-mirage'] = {
+    enabled: true
+  };
+
   return ENV;
 };
