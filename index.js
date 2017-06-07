@@ -13,6 +13,7 @@ module.exports = {
   files: [
     // from `node_modules/`
     'element-resize-detector/dist/element-resize-detector.js',
+    'jquery-mousewheel/jquery.mousewheel.js',
     'jquery-ui/ui/data.js',
     'jquery-ui/ui/version.js',
     'jquery-ui/ui/position.js',
@@ -48,6 +49,7 @@ module.exports = {
   treeForVendor: function(tree) {
     return new Merge([].concat(tree || [], [
       this.treeForNodeModule('jquery-ui'),
+      this.treeForNodeModule('jquery-mousewheel'),
       this.treeForNodeModule('perfect-scrollbar'),
       this.treeForNodeModule('jquery-ui-touch-punch'),
       this.treeForNodeModule('element-resize-detector')
