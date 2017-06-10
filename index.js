@@ -103,7 +103,7 @@ module.exports = {
   setupPreprocessorRegistry: function(type, registry) {
     registry.add('htmlbars-ast-plugin', {
       name: 'property-component',
-      plugin: require('./lib/contextual-component-path-transform'),
+      plugin: require('./lib/htmlbars-ast-plugin'),
       baseDir: function() {
         return __dirname;
       }
