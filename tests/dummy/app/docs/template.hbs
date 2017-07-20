@@ -1,0 +1,24 @@
+{{#docs-viewer as |viewer|}}
+  {{#viewer.nav as |nav|}}
+    {{nav.item 'Home' 'docs.index'}}
+    {{!nav.item 'Quickstart' 'docs.quickstart'}}
+    {{!nav.item 'Cookbook' 'docs.patterns'}}
+    {{nav.item 'Components' 'docs.components.index'}}
+    {{#nav.subnav as |nav|}}
+      {{nav.item 'UI' 'docs.components.ui'}}
+      {{nav.item 'Form' 'docs.components.form'}}
+      {{nav.item 'Input' 'docs.components.input'}}
+      {{nav.item 'Utility' 'docs.components.utility'}}
+    {{/nav.subnav}}
+
+    {{!nav.item 'API Reference' 'docs.api'}}
+  {{/viewer.nav}}
+
+  {{#viewer.main}}
+    <div class="docs-container docs__center">
+      <div class="docs-section">
+        {{outlet}}
+      </div>
+    </div>
+  {{/viewer.main}}
+{{/docs-viewer}}

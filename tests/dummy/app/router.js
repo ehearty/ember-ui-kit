@@ -7,13 +7,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('ui-table');
-  this.route('ui-resizable');
-  this.route('ui-draggable');
-  this.route('ui-select');
-  this.route('ui-scrollable');
-  this.route('ui-position');
-  this.route('fm-form');
+  this.route('docs', function() {
+    this.route('components', function() {
+      this.route('ui');
+      this.route('form');
+      this.route('input');
+      this.route('utility');
+    });
+  });
 });
 
 export default Router;
