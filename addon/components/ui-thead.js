@@ -42,21 +42,25 @@ export default Ember.Component.extend(Styleable, {
     detector.listenTo(this.$('.ui-thead__resizer').get(0), this.rerender = Ember.run.bind(this, this.rerender));
 
     this.$('.ui-sortable').on('sortupdate', (evt, { item }) => {
-      let target = item.attr('data-column-id');
-      let after = item.next().attr('data-column-id');
+      let block = item.parentsUntil('.ui-thead', '[data-table-block]').attr('data-table-block');
+      let ordered = item.parentsUntil('.ui-thead').find('.ui-th').filter('[data-column-id]');
+
+      let targets = item.find('.ui-th').addBack().filter('[data-column-id]')
+        .map((index, element) => Ember.$(element).attr('data-column-id'))
+      let after = Ember.$(ordered[ordered.index(ordered.filter(`[data-column-id="${targets.get(-1)}"]`)) + 1])
+        .attr('data-column-id');
+      let selector = targets.toArray().map(target => `[data-column-id="${target}"]`).join();
 
       // `target` is moved to before `after`
 
-      table.find('.ui-tr').each(function() {
+      table.find(`[data-table-block=${block}] .ui-tr`).each(function() {
         let tr = Ember.$(this);
 
         if (typeof after !== 'undefined') {
-          let before = tr.find(`[data-column-id="${after}"]`);
-
-          tr.find(`[data-column-id="${target}"]`).insertBefore(before);
+          tr.find(selector).insertBefore(tr.find(`[data-column-id="${after}"]`));
         }
         else {
-          tr.find(`[data-column-id="${target}"]`).appendTo(tr);
+          tr.find(selector).appendTo(tr);
         }
       });
     });
