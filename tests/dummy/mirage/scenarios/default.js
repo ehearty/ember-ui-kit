@@ -4,7 +4,7 @@ faker.seed(20);
 
 export default function(server) {
   let tags = server.createList('tag', faker.random.number(10));
-  let users = server.createList('user', faker.random.number(5));
+  let users = server.createList('user', faker.random.number(50));
 
   users.forEach(user => {
     let posts = server.createList('post', faker.random.number(10));
