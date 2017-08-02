@@ -1,21 +1,25 @@
 /* eslint-env node */
 /* global require, module */
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+const Funnel = require('broccoli-funnel');
+const MergeTrees = require('broccoli-merge-trees');
+
+const Config = {
+  'ember-cli-babel': {
+    includePolyfill: true
+  }
+};
 
 module.exports = function(defaults) {
-  var app = new EmberAddon(defaults, {
-    // Add options here
-    'ember-cli-babel': {
-      includePolyfill: true
-    }
-  });
+  let appTree = new EmberAddon(defaults, Config).toTree();
 
-  /*
-    This build file specifies the options for the dummy test app of this
-    addon, located in `/tests/dummy`
-    This build file does *not* influence how the addon or the app using it
-    behave. You most likely want to be modifying `./index.js` or app's build file
-  */
-
-  return app.toTree();
+  return new MergeTrees([
+    appTree,
+    new Funnel(appTree, {
+      files: [ 'index.html' ],
+      getDestinationPath() {
+        return '404.html';
+      }
+    })
+  ]);
 };
