@@ -23,12 +23,6 @@ export default Ember.Component.extend(Styleable, {
     return this.$('[data-column-children="0"]');
   }).readOnly(),
 
-  leafNodeWidths: Ember.computed('leafNodes', function() {
-    return this.get('leafNodes')
-      .toArray()
-      .map(el => Ember.$(el).attr('data-column-width'));
-  }).volatile().readOnly(),
-
   ns: Ember.computed(function() {
     return this.$().closest('.ui-table--v2').attr('id');
   }).readOnly(),
@@ -65,7 +59,6 @@ export default Ember.Component.extend(Styleable, {
       });
     });
     this.$().on('resize', Ember.run.bind(this, function() {
-      this.notifyPropertyChange('leafNodeWidths');
       this.rerender();
     }));
   },
@@ -74,14 +67,47 @@ export default Ember.Component.extend(Styleable, {
     this._super(...arguments);
 
     let ns = this.get('ns');
-    let widths = this.get('leafNodeWidths');
+    let nodes = this.get('leafNodes').toArray();
+    let widths = nodes.map(el => Ember.$(el).attr('data-column-width'));
+    let paddings = nodes
+      .map(Ember.$)
+      .map(el => {
+        let padding = el.attr('data-padding');
+
+        if (!padding) {
+          let { 'padding-left': left, 'padding-right': right } = el.css([ 'padding-left', 'padding-right' ]);
+
+          padding = `${parseFloat(left)},${parseFloat(right)}`;
+
+          el.attr('data-padding', padding);
+        }
+
+        return padding.split(',').map(Number);
+      });
 
     // TODO handle breakpoints
     cssLayout(this.$().width(), widths).forEach((width, index) => {
-      this.style(`#${ns} [data-column-id="${index}"]`, {
-        'width': `${width}px`,
-        'min-width': `${width}px`
-      });
+      let [ left, right ] = paddings[index];
+      let node = nodes[index];
+
+      if (left + right > width) {
+        let ratio = width / (left + right);
+
+        this.style(`#${ns} [data-column-id="${index}"]`, {
+          'padding-left': `${left * ratio}px`,
+          'padding-right': `${right * ratio}px`,
+          'width': `${width}px`,
+          'min-width': `${width}px`
+        });
+      }
+      else {
+        this.style(`#${ns} [data-column-id="${index}"]`, {
+          'padding-left': null,
+          'padding-right': null,
+          'width': `${width}px`,
+          'min-width': `${width}px`
+        });
+      }
     });
   },
 

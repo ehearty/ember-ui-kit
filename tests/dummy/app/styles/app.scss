@@ -97,3 +97,8 @@ body.ember-application .ui-scrollable {
 #ui-position .ui-position {
   background: lightgreen;
 }
+
+.ui-td,
+.ui-th[data-column-children="0"] {
+  padding: 0 10px;
+}

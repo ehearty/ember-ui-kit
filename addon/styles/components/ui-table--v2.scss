@@ -36,6 +36,8 @@
 
 .ui-td {
   overflow: hidden;
+  box-sizing: border-box;
+  transition: all 150ms ease-out;
 
   * {
     display: block;
@@ -43,6 +45,8 @@
 }
 
 .ui-th {
+  box-sizing: border-box;
+  transition: all 150ms ease-out;
   overflow: hidden;
   display: inline-block;
   vertical-align: bottom;
