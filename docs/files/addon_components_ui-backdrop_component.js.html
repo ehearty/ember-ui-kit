@@ -53,8 +53,8 @@
                     <li class="panel panel-default">
                         <div class="panel-heading" role="tab" id="sidebar-version-heading">
                             <h4 class="panel-title">
-                                <a role="button" href="https://github.com/ming-codes/ember-ui-kit/commits/0b9570c9" target="_blank">
-                                  Tag: 0.10.3.0b9570c9
+                                <a role="button" href="https://github.com/ming-codes/ember-ui-kit/commits/11894b50" target="_blank">
+                                  Tag: 0.10.4.11894b50
                                 </a>
                             </h4>
                         </div>
@@ -144,6 +144,7 @@
 <div class="file">
     <pre class="prettyprint linenums">
 import Ember from &#x27;ember&#x27;;
+import layout from &#x27;./template&#x27;;
 
 /**
  * &#x60;ui-backdrop&#x60; is a simple component to put a mask
@@ -156,7 +157,14 @@ import Ember from &#x27;ember&#x27;;
  * @class BackdropComponent
  */
 export default Ember.Component.extend({
-  classNames: &#x27;ui-backdrop&#x27;
+  classNames: &#x27;ui-backdrop&#x27;,
+  layout,
+
+  click(evt) {
+    if (evt.target === this.element) {
+      this.sendAction(&#x27;on-click&#x27;);
+    }
+  }
 });
 
     </pre>

@@ -3,7 +3,7 @@
         "name": "ember-ui-kit",
         "description": "The default blueprint for ember-cli addons.",
         "url": "https://github.com/ming-codes/ember-ui-kit",
-        "version": "0.10.3.0b9570c9"
+        "version": "0.10.4.11894b50"
     },
     "files": {
         "addon/components/fm-field/component.js": {
@@ -462,7 +462,7 @@
             "module": "ui",
             "namespace": "UI",
             "file": "addon/components/ui-backdrop/component.js",
-            "line": 3,
+            "line": 4,
             "description": "`ui-backdrop` is a simple component to put a mask\nover the screen. Use with `ui-position` to create\nmodal.",
             "access": "public",
             "tagname": ""
