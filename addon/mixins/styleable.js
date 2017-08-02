@@ -30,7 +30,12 @@ export default Ember.Mixin.create({
         value = value.call(this);
       }
 
-      rule.style.setProperty(key, value);
+      if (value === null) {
+        rule.style.removeProperty(key);
+      }
+      else {
+        rule.style.setProperty(key, value);
+      }
     });
   },
 
