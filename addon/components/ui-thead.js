@@ -27,7 +27,7 @@ export default Ember.Component.extend(Styleable, {
     return this.get('leafNodes')
       .toArray()
       .map(el => Ember.$(el).attr('data-column-width'));
-  }).readOnly(),
+  }).volatile().readOnly(),
 
   ns: Ember.computed(function() {
     return this.$().closest('.ui-table--v2').attr('id');
