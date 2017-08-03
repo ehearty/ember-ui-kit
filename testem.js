@@ -7,14 +7,18 @@ module.exports = {
     "dockcontainer": true
   },
   "launch_in_ci": [
-    "Firefox"
+    "Chrome"
   ],
   "launch_in_dev": [
   ],
-  "url": "http://localhost:7357/1/tests/index.html?hidepassed",
   "browser_args": {
-    "Chromium": [
-      "--no-sandbox"
+    "Chrome": [
+      "--headless",
+      "--disable-gpu",
+      "--remote-debugging-port=9222",
+      "--remote-debugging-address=0.0.0.0",
+      "--no-sandbox",
+      "--user-data-dir=/tmp"
     ]
   }
 };

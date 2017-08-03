@@ -3,7 +3,8 @@ language: node_js
 node_js:
   - "6"
 
-sudo: false
+sudo: required
+dist: trusty
 
 cache:
   directories:
@@ -12,7 +13,18 @@ cache:
     - node_modules
 
 addons:
-  firefox: "latest"
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+      - libnss3
+      - libnss3-tools
+      - libfontconfig1
+      - wget
+      - ca-certificates
+      - apt-transport-https
+      - inotify-tools
 
 env:
   # we recommend testing LTS's and latest stable release (bonus points to beta/canary)
@@ -33,15 +45,9 @@ matrix:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
 before_install:
-  - npm config set spin false
-  - npm install -g bower
-  - bower --version
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
 
 install:
   - npm install
-  - bower install
 
 script:
   # Usually, it's ok to finish the test scenario without reverting
