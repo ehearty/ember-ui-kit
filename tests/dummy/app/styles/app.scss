@@ -91,12 +91,85 @@ body.ember-application .ui-scrollable {
   margin: auto;
   width: 100px;
   height: 100px;
+//#chrome {
+//  display: flex;
+//  flex-direction: column;
+//}
+//
+//#header-1 {
+//  height: 18px;
+//}
+//
+//#content-1 {
+//  height: calc(100vh - 18px);
+//  display: flex;
+//  flex-direction: column;
+//}
+//
+//.ember-application {
+//  margin: 0;
+//  overflow: hidden;
+//
+.ui-tr--even {
   background: lightblue;
 }
-
-#ui-position .ui-position {
-  background: lightgreen;
+//
+//  .ui-thead,
+//  .ui-tbody,
+//  .ui-tfoot {
+//    border: 1px dotted red;
+//  }
+//
+//  .ui-thead,
+//  .ui-tbody,
+//  .ui-tfoot,
+//  .ui-table__thead,
+//  .ui-table__tbody,
+//  .ui-table__tfoot  {
+//    border-left: 10px solid transparent;
+//    border-right: 10px solid transparent;
+//    padding: 0 20px;
+//  }
+//
+.ui-tr {
+  height: 56px;
 }
+//
+//  .ui-table {
+//    border: 20px solid black;
+//  }
+//
+.ui-table--v2 {
+  max-height: 80vh;
+}
+//}
+//
+//ul {
+//  margin: 0;
+//  padding-left: 25px;
+//}
+//
+//.panel {
+//  max-width: 320px;
+//  max-height: 480px;
+//  margin: 50px auto;
+//  display: flex;
+//  flex-direction: column;
+//}
+//
+//body.ember-application .ui-scrollable {
+//}
+//
+//#ui-position {
+//  margin: auto;
+//  width: 100px;
+//  height: 100px;
+//  background: lightblue;
+//}
+//
+//#ui-position .ui-position {
+//  background: lightgreen;
+//}
 
 .ui-td,
 .ui-th[data-column-children="0"] {
