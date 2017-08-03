@@ -83,8 +83,8 @@ test('#getBox', function(assert) {
   assert.deepEqual(box, {
     width: 160,
     height: 120,
-    scrollWidth: 256,
-    scrollHeight: 184,
+    scrollWidth: 150,
+    scrollHeight: 110,
 
     margin: {
       top: 80,
