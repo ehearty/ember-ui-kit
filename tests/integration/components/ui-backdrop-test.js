@@ -64,7 +64,7 @@ test('it renders a simple backdrop in block form', async function(assert) {
     <div id="content">
       CONTENT CONTENT CONTENT CONTENT CONTENT
       {{#ui-backdrop on-click=(action "backdrop")}}
-        {{#ui-position options=(hash my="left top" at="left bottom")}}
+        {{#ui-position}}
           {{ui-button "POSITIONED" on-click=(action "button")}}
         {{/ui-position}}
       {{/ui-backdrop}}
