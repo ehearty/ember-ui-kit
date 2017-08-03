@@ -7,7 +7,7 @@ module.exports = {
     "dockcontainer": true
   },
   "launch_in_ci": [
-    "Chromium"
+    "Firefox"
   ],
   "launch_in_dev": [
   ],
