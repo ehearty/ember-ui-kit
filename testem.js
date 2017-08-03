@@ -7,10 +7,11 @@ module.exports = {
     "dockcontainer": true
   },
   "launch_in_ci": [
-    "Firefox"
+    "Chromium"
   ],
   "launch_in_dev": [
   ],
+  "url": "http://localhost:7357/1/tests/index.html?hidepassed",
   "browser_args": {
     "Chromium": [
       "--no-sandbox"
