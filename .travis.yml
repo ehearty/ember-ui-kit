@@ -12,7 +12,7 @@ cache:
     - node_modules
 
 addons:
-  firefox: "51.0"
+  firefox: "latest"
 
 env:
   # we recommend testing LTS's and latest stable release (bonus points to beta/canary)
