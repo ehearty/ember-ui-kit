@@ -1,4 +1,4 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { moduleForComponent, skip } from 'ember-qunit';
 import Microstates from 'ember-microstates/initializers/microstates';
 import hbs from 'htmlbars-inline-precompile';
 
@@ -8,7 +8,7 @@ moduleForComponent('ui-table', 'Integration | Component | ui-table', {
   integration: true
 });
 
-test('it renders simple table', function(assert) {
+skip('it renders simple table', function(assert) {
   let clicks = [];
 
   Microstates.initialize(this);
@@ -134,7 +134,7 @@ test('it renders simple table', function(assert) {
   assert.equal(clicks.length, 80, 'should register 80 clicks');
 });
 
-test('it renders frozen column table', function(assert) {
+skip('it renders frozen column table', function(assert) {
   this.set('data', Array.from({ length: 40 }).fill({
     id: 0,
     firstName: 'Mini',
