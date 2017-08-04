@@ -23,10 +23,11 @@ export default Ember.Component.extend({
   }).readOnly(),
 
   bufferSize: Ember.computed('rowHeight', function() {
+    let screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     let screenHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     let rowHeight = this.get('rowHeight');
 
-    return Math.ceil(screenHeight / rowHeight);
+    return Math.ceil(Math.max(screenWidth, screenHeight) / rowHeight);
   }),
   bufferStart: 0,
   buffer: Ember.computed('modelNormalized.[]', 'bufferStart', 'bufferSize', function() {
