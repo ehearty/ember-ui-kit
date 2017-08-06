@@ -1,1 +1,16 @@
-{{yield}}
+{{#if (hasBlock "inverse")}}
+  <div data-table-block="fixed">
+    {{yield}}
+  </div>
+  <div data-table-block="variable">
+    <div class="ui-tbody__content">
+      {{yield to="inverse"}}
+    </div>
+  </div>
+{{else}}
+  <div data-table-block="variable">
+    <div class="ui-tbody__content">
+      {{yield}}
+    </div>
+  </div>
+{{/if}}

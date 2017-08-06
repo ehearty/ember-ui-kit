@@ -23,6 +23,11 @@
   min-height: max-content;
 }
 
+.ui-thead__content {
+  display: flex;
+  align-items: flex-end;
+}
+
 .ui-thead__content,
 .ui-tfoot__content {
   overflow: hidden;
@@ -88,5 +93,9 @@
 
 .ui-tr--measure {
   height: 0;
+  overflow: hidden;
+}
+
+.ui-tr {
   overflow: hidden;
 }
