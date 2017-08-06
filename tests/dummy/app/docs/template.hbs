@@ -1,14 +1,25 @@
 {{#docs-viewer as |viewer|}}
   {{#viewer.nav as |nav|}}
     {{nav.item 'Home' 'docs.index'}}
-    {{!nav.item 'Quickstart' 'docs.quickstart'}}
-    {{!nav.item 'Cookbook' 'docs.patterns'}}
-    {{nav.item 'Components' 'docs.components.index'}}
-    {{#nav.subnav as |nav|}}
-      {{nav.item 'UI' 'docs.components.ui'}}
-      {{nav.item 'Form' 'docs.components.form'}}
-      {{nav.item 'Input' 'docs.components.input'}}
-      {{nav.item 'Utility' 'docs.components.utility'}}
+
+    {{nav.item 'Components' 'docs.components'}}
+
+    {{#nav.subnav as |subnav|}}
+      {{subnav.item 'UI' 'docs.components/ui'}}
+
+      {{#nav.subnav as |subnav|}}
+        {{subnav.item 'Backdrop' 'docs.components/ui/backdrop'}}
+        {{subnav.item 'Position' 'docs.components/ui/position'}}
+        {{subnav.item 'Anchor' 'docs.components/ui/anchor'}}
+        {{subnav.item 'Draggable' 'docs.components/ui/draggable'}}
+        {{subnav.item 'Resizable' 'docs.components/ui/resizable'}}
+        {{subnav.item 'Sortable' 'docs.components/ui/sortable'}}
+        {{subnav.item 'Table' 'docs.components/ui/table'}}
+      {{/nav.subnav}}
+
+      {{subnav.item 'FM' 'docs.components/fm'}}
+      {{subnav.item 'IN' 'docs.components/in'}}
+      {{subnav.item 'X' 'docs.components/x'}}
     {{/nav.subnav}}
 
     {{!nav.item 'API Reference' 'docs.api'}}

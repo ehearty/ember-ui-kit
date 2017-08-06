@@ -8,12 +8,20 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('docs', function() {
-    this.route('components', function() {
-      this.route('ui');
-      this.route('form');
-      this.route('input');
-      this.route('utility');
-    });
+    this.route('components');
+
+    this.route('components/ui');
+    this.route('components/ui/backdrop');
+    this.route('components/ui/position');
+    this.route('components/ui/anchor');
+    this.route('components/ui/draggable');
+    this.route('components/ui/resizable');
+    this.route('components/ui/sortable');
+    this.route('components/ui/table');
+
+    this.route('components/in');
+    this.route('components/fm');
+    this.route('components/x');
   });
 });
 
