@@ -1,1 +1,19 @@
-{{yield}}
+<div class="ui-thead__resizer-content">
+  {{#if (hasBlock "inverse")}}
+    <div data-table-block="fixed">
+      {{yield}}
+    </div>
+    <div data-table-block="variable">
+      <div class="ui-thead__content">
+        {{yield to="inverse"}}
+      </div>
+    </div>
+  {{else}}
+    <div data-table-block="variable">
+      <div class="ui-thead__content">
+        {{yield}}
+      </div>
+    </div>
+  {{/if}}
+</div>
+<div class="ui-thead__resizer"></div>
