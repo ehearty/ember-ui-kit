@@ -30,7 +30,17 @@ export default Ember.Component.extend({
     return Math.ceil(Math.max(screenWidth, screenHeight) / rowHeight);
   }),
   bufferStart: 0,
-  buffer: Ember.computed('modelNormalized.[]', 'bufferStart', 'bufferSize', function() {
+  buffer: Ember.computed('bufferSize', function() {
+    let size = this.get('bufferSize');
+
+    return Ember.A(Array.from({ length: size }).map(function(fill, index) {
+      return Ember.Object.create({
+        id: index
+      })
+    }));
+  }).readOnly(),
+
+  bufferContent: Ember.computed('modelNormalized.[]', 'bufferStart', 'bufferSize', function() {
     let model = this.get('modelNormalized');
     let start = this.get('bufferStart');
     let size = this.get('bufferSize');
@@ -43,6 +53,18 @@ export default Ember.Component.extend({
         isOdd: !((start + index) % 2)
       };
     });
+  }).readOnly(),
+
+  bufferInPlace: Ember.computed('buffer', 'bufferContent', function() {
+    let buffer = this.get('buffer');
+    let content = this.get('bufferContent');
+    let size = content.length;
+
+    while (size--) {
+      buffer.objectAt(size).setProperties(content[size]);
+    }
+
+    return buffer;
   }).readOnly(),
 
   didInsertElement() {
