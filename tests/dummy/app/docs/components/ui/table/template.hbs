@@ -25,7 +25,13 @@
         {{#ui-td column=0}}{{item.id}}{{/ui-td}}
       {{/ui-tr--each}}
     {{else}}
-      {{#ui-tr--each model key="id" as |item|}}
+      {{! TODO
+        row.{drilldown,rollup}
+          expand/collapse tree
+        row.{expand,collapse}
+          expand/collapse detail view
+      }}
+      {{#ui-tr--each model key="id" as |item index row|}}
         {{#fm-form item as |field|}}
           {{#ui-td column=1}}
             {{#field.firstName as |in|}}
@@ -42,6 +48,12 @@
           {{#ui-td column=5}}XXX-XX-XXXX{{/ui-td}}
           {{#ui-td column=6}}********{{/ui-td}}
         {{/fm-form}}
+      {{!else
+        TODO use else block here for expanded row,
+        row details locks scroll,
+        with expanded row itself scrollable,
+        plus a max height that is height of body minus row height
+      }}
       {{/ui-tr--each}}
     {{/ui-tbody}}
 
