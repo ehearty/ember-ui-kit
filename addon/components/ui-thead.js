@@ -36,27 +36,31 @@ export default Ember.Component.extend(Styleable, {
     detector.listenTo(this.$('.ui-thead__resizer').get(0), this.rerender = Ember.run.bind(this, this.rerender));
 
     this.$('.ui-sortable').on('sortupdate', (evt, { item }) => {
-      let block = item.parentsUntil('.ui-thead', '[data-table-block]').attr('data-table-block');
-      let ordered = item.parentsUntil('.ui-thead').find('.ui-th').filter('[data-column-id]');
+      //let block = item.parentsUntil('.ui-thead', '[data-table-block]').attr('data-table-block');
+      let ordered = item.closest('.ui-thead').find('.ui-th[data-column-id]');
 
-      let targets = item.find('.ui-th').addBack().filter('[data-column-id]')
-        .map((index, element) => Ember.$(element).attr('data-column-id'))
-      let after = Ember.$(ordered[ordered.index(ordered.filter(`[data-column-id="${targets.get(-1)}"]`)) + 1])
-        .attr('data-column-id');
-      let selector = targets.toArray().map(target => `[data-column-id="${target}"]`).join();
+      //let targets = item.find('.ui-th').addBack().filter('[data-column-id]')
+      //  .map((index, element) => Ember.$(element).attr('data-column-id'))
+      //let after = Ember.$(ordered[ordered.index(ordered.filter(`[data-column-id="${targets.get(-1)}"]`)) + 1])
+      //  .attr('data-column-id');
+      //let selector = targets.toArray().map(target => `[data-column-id="${target}"]`).join();
 
       // `target` is moved to before `after`
 
-      table.find(`[data-table-block=${block}] .ui-tr`).each(function() {
-        let tr = Ember.$(this);
+      //table.find(`[data-table-block=${block}] .ui-tr`).each(function() {
+      //  let tr = Ember.$(this);
 
-        if (typeof after !== 'undefined') {
-          tr.find(selector).insertBefore(tr.find(`[data-column-id="${after}"]`));
-        }
-        else {
-          tr.find(selector).appendTo(tr);
-        }
-      });
+      //  if (typeof after !== 'undefined') {
+      //    tr.find(selector).insertBefore(tr.find(`[data-column-id="${after}"]`));
+      //  }
+      //  else {
+      //    tr.find(selector).appendTo(tr);
+      //  }
+      //});
+
+      ordered.attr('data-column-order', index => index);
+
+      Ember.run(this, 'rerender');
     });
     this.$().on('resize', Ember.run.bind(this, function() {
       this.rerender();
@@ -89,11 +93,13 @@ export default Ember.Component.extend(Styleable, {
     cssLayout(this.$().width(), widths).forEach((width, index) => {
       let [ left, right ] = paddings[index];
       let node = nodes[index];
+      let order = Ember.$(node).attr('data-column-order');
 
       if (left + right > width) {
         let ratio = width / (left + right);
 
         this.style(`#${ns} [data-column-id="${index}"]`, {
+          'order': order || null,
           'padding-left': `${left * ratio}px`,
           'padding-right': `${right * ratio}px`,
           'width': `${width}px`,
@@ -102,6 +108,7 @@ export default Ember.Component.extend(Styleable, {
       }
       else {
         this.style(`#${ns} [data-column-id="${index}"]`, {
+          'order': order || null,
           'padding-left': null,
           'padding-right': null,
           'width': `${width}px`,
