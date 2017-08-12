@@ -92,13 +92,14 @@ export default Ember.Component.extend(Styleable, {
     // TODO handle breakpoints
     cssLayout(this.$().width(), widths).forEach((width, index) => {
       let [ left, right ] = paddings[index];
-      let node = nodes[index];
-      let order = Ember.$(node).attr('data-column-order');
+      let node = Ember.$(nodes[index]);
+      let order = node.attr('data-column-order');
+      let id = node.attr('data-column-id');
 
       if (left + right > width) {
         let ratio = width / (left + right);
 
-        this.style(`#${ns} [data-column-id="${index}"]`, {
+        this.style(`#${ns} [data-column-id="${id}"]`, {
           'order': order || null,
           'padding-left': `${left * ratio}px`,
           'padding-right': `${right * ratio}px`,
@@ -107,7 +108,7 @@ export default Ember.Component.extend(Styleable, {
         });
       }
       else {
-        this.style(`#${ns} [data-column-id="${index}"]`, {
+        this.style(`#${ns} [data-column-id="${id}"]`, {
           'order': order || null,
           'padding-left': null,
           'padding-right': null,
