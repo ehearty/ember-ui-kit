@@ -22,12 +22,15 @@ export default Ember.Component.extend({
     return this.$('.ui-tr--measure .ui-tr').outerHeight(true);
   }).readOnly(),
 
-  bufferSize: Ember.computed('rowHeight', function() {
+  bufferSize: Ember.computed('rowHeight', 'modelNormalized.length', function() {
     let screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     let screenHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     let rowHeight = this.get('rowHeight');
+    let len = this.get('modelNormalized.length');
 
-    return Math.ceil(Math.max(screenWidth, screenHeight) / rowHeight);
+    let computed = Math.ceil(Math.max(screenWidth, screenHeight) / rowHeight);
+
+    return Math.min(computed, len);
   }),
   bufferStart: 0,
   buffer: Ember.computed('bufferSize', function() {
@@ -65,30 +68,41 @@ export default Ember.Component.extend({
     return buffer;
   }).readOnly(),
 
+  block: Ember.computed(function() {
+    return this.$().closest('[data-table-block]');
+  }).readOnly(),
+
   didInsertElement() {
     this._super(...arguments);
 
-    let length = this.get('model.length');
     let rowHeight = this.get('rowHeight');
-    let bodyHeight = this.$().height();
+    let ns = this.get('elementId');
 
-    let block = this.$().parentsUntil('.ui-table--v2', '[data-table-block]');
+    this.$().closest('.ui-tbody').on(`scroll.${ns}`, evt => {
+      Ember.run(this, this.set, 'bufferStart', Math.floor(evt.target.scrollTop / rowHeight));
+    });
+  },
+
+  willDestroyElement() {
+    this._super(...arguments);
+
+    let ns = this.get('elementId');
+
+    this.$().closest('.ui-tbody').off(`.${ns}`);
+  },
+
+  didRender() {
+    this._super(...arguments);
+
+    let length = this.get('modelNormalized.length');
+    let rowHeight = this.get('rowHeight');
+
+    let block = this.get('block');
+    let start = this.get('bufferStart');
 
     block.css({
-      marginTop: 0,
-      height: length * rowHeight
-    });
-
-    this.$().parentsUntil('.ui-table--v2', '.ui-tbody').on('scroll', evt => {
-      let scrollTop = evt.target.scrollTop;
-      let start = Math.floor(scrollTop / rowHeight);
-
-      block.css({
-        marginTop: rowHeight * start,
-        height: rowHeight * (length - start)
-      });
-
-      Ember.run(this, this.set, 'bufferStart', start);
+      marginTop: rowHeight * start,
+      height: rowHeight * (length - start)
     });
   }
 
