@@ -48,9 +48,7 @@ export default Ember.Component.extend({
     return model.slice(start, start + size).map((item, index) => {
       return {
         model: item,
-        index: start + index,
-        isEven: ((start + index) % 2),
-        isOdd: !((start + index) % 2)
+        index: start + index
       };
     });
   }).readOnly(),
