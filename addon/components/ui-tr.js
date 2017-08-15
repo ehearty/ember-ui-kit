@@ -15,7 +15,7 @@ export default Ember.Component.extend({
   model: null,
   index: null,
 
-  isOdd: Ember.computed(function() {
+  isOdd: Ember.computed('index', function() {
     return Boolean(this.get('index') % 2);
   }).readOnly(),
 
