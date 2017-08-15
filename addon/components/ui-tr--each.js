@@ -19,7 +19,7 @@ export default Ember.Component.extend({
   modelNormalized: Ember.computed.readOnly('model'),
 
   rowHeight: Ember.computed(function() {
-    return this.$('.ui-tr--measure .ui-tr').height();
+    return this.$('.ui-tr--measure .ui-tr').outerHeight(true);
   }).readOnly(),
 
   bufferSize: Ember.computed('rowHeight', function() {
