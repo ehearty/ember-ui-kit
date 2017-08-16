@@ -7,7 +7,13 @@
       {{ui-button section on-click=(action (mut anchor) section)}}
     {{/each}}
 
-    {{#ui-anchor-switch anchor as |anchor|}}
+    <hr>
+
+    {{anchor}}
+
+    <hr>
+
+    {{#ui-anchor-switch anchor on-change=(action (mut anchor)) as |anchor|}}
       {{#each model as |section|}}
         {{#anchor.case section}}
           {{section}}
