@@ -49,12 +49,12 @@ export default Ember.Component.extend({
 
   // TODO smooth scroll
   scrollIntoView() {
-    if (Ember.testing) {
-      this.element.scrollIntoView();
-    }
-    else {
-      this.element.scrollIntoView(this.getProperties('block', 'behavior'));
-    }
+    let sw = this.$().closest('.ui-anchor-switch');
+    let first = sw.find('.ui-anchor-case').first();
+    let target = this.$();
+    let offset = target.offset().top - first.offset().top;
+
+    sw.scrollTop(offset);
   }
 
 }).reopenClass({
