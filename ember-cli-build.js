@@ -7,6 +7,11 @@ const MergeTrees = require('broccoli-merge-trees');
 const Config = {
   'ember-cli-babel': {
     includePolyfill: true
+  },
+  snippetSearchPaths: ['tests/dummy/app'],
+  snippetRegexes: {
+    begin: /{{#(?:docs-snippet|demo.example|demo.live-example)\sname=(?:\"|\')(\S+)(?:\"|\')/,
+    end: /{{\/(?:docs-snippet|demo.example|demo.live-example)}}/,
   }
 };
 
