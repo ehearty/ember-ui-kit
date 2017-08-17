@@ -54,11 +54,9 @@ moduleForComponent('ui-anchor-switch', 'Integration | Component | ui-anchor', {
 test('it binds data down', async function(assert) {
   await new Ember.RSVP.Promise(requestAnimationFrame);
 
-  assert.equal(this.$('.ui-anchor-switch').scrollTop(), 320);
+  assert.equal(this.$('.ui-anchor-switch').scrollTop(), 160);
 
   this.set('position', 0);
-
-  await new Ember.RSVP.Promise(requestAnimationFrame);
 
   assert.equal(this.$('.ui-anchor-switch').scrollTop(), 0);
 });
