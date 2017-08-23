@@ -1,6 +1,6 @@
 .ui-tbody,
 .ui-tbody__content {
-  will-change: transform;
+  // FIXME creates stacking context // will-change: transform;
 }
 
 .ui-table--v2,
@@ -45,7 +45,7 @@
   transition: width 150ms ease-out, padding 150ms ease-out;
 
   * {
-    display: block;
+    // FIXME causes <td> display change display: block;
   }
 }
 
