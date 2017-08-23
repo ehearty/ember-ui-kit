@@ -44,7 +44,12 @@
             {{/field.lastName}}
           {{/ui-td}}
           {{#ui-td column=3}}{{item.nickName}}{{/ui-td}}
-          {{#ui-td column=4}}{{item.age}}{{/ui-td}}
+          {{#ui-td column=4}}
+            {{item.age}}
+            {{#ui-position options=(hash my="left center" at="right center")}}
+              POSITION
+            {{/ui-position}}
+          {{/ui-td}}
           {{#ui-td column=5}}XXX-XX-XXXX{{/ui-td}}
           {{#ui-td column=6}}********{{/ui-td}}
         {{/fm-form}}
