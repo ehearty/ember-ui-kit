@@ -3,7 +3,7 @@
         "name": "ember-ui-kit",
         "description": "The default blueprint for ember-cli addons.",
         "url": "https://github.com/ming-codes/ember-ui-kit",
-        "version": "0.10.5.97751c00"
+        "version": "0.10.6.20e7f40e"
     },
     "files": {
         "addon/components/fm-field/component.js": {
@@ -939,7 +939,7 @@
         },
         {
             "file": "addon/components/ui-anchor-switch/component.js",
-            "line": 11,
+            "line": 10,
             "access": "public",
             "tagname": "",
             "itemtype": "attribute",
@@ -950,7 +950,7 @@
         },
         {
             "file": "addon/components/ui-anchor-switch/component.js",
-            "line": 17,
+            "line": 16,
             "access": "public",
             "tagname": "",
             "itemtype": "attribute",
@@ -961,7 +961,7 @@
         },
         {
             "file": "addon/components/ui-anchor-switch/component.js",
-            "line": 23,
+            "line": 22,
             "access": "public",
             "tagname": "",
             "itemtype": "attribute",
@@ -972,7 +972,7 @@
         },
         {
             "file": "addon/components/ui-anchor-switch/component.js",
-            "line": 76,
+            "line": 49,
             "itemtype": "event",
             "name": "on-change",
             "class": "UI.BackdropComponent",

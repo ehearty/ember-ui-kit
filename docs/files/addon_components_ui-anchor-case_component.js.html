@@ -53,8 +53,8 @@
                     <li class="panel panel-default">
                         <div class="panel-heading" role="tab" id="sidebar-version-heading">
                             <h4 class="panel-title">
-                                <a role="button" href="https://github.com/ming-codes/ember-ui-kit/commits/97751c00" target="_blank">
-                                  Tag: 0.10.5.97751c00
+                                <a role="button" href="https://github.com/ming-codes/ember-ui-kit/commits/20e7f40e" target="_blank">
+                                  Tag: 0.10.6.20e7f40e
                                 </a>
                             </h4>
                         </div>
@@ -194,12 +194,12 @@ export default Ember.Component.extend({
 
   // TODO smooth scroll
   scrollIntoView() {
-    if (Ember.testing) {
-      this.element.scrollIntoView();
-    }
-    else {
-      this.element.scrollIntoView(this.getProperties(&#x27;block&#x27;, &#x27;behavior&#x27;));
-    }
+    let sw = this.$().closest(&#x27;.ui-anchor-switch&#x27;);
+    let first = sw.find(&#x27;.ui-anchor-case&#x27;).first();
+    let target = this.$();
+    let offset = target.offset().top - first.offset().top;
+
+    sw.scrollTop(offset);
   }
 
 }).reopenClass({
