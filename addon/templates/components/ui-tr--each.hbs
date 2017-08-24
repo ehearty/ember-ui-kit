@@ -1,8 +1,10 @@
 <div class="ui-tr--measure">
   <div class="ui-tr"></div>
 </div>
-{{#vertical-collection model key=key containerSelector=".ui-tbody" tagName="div" estimateHeight=rowHeight staticHeight=true bufferSize=5 as |item index|}}
-  {{#ui-tr model=item index=index}}
-    {{yield item index}}
-  {{/ui-tr}}
-{{/vertical-collection}}
+{{#if rowHeight}}
+  {{#vertical-collection model containerSelector=".ui-tbody" key=key estimateHeight=rowHeight staticHeight=true bufferSize=5 as |item index|}}
+    {{#ui-tr model=item index=index}}
+      {{yield item index}}
+    {{/ui-tr}}
+  {{/vertical-collection}}
+{{/if}}
