@@ -1,8 +1,8 @@
 <div class="ui-tr--measure">
   <div class="ui-tr"></div>
 </div>
-{{#each bufferInPlace key="id" as |item|}}
-  {{#ui-tr model=item.model index=item.index}}
-    {{yield item.model item.index}}
+{{#vertical-collection model key=key containerSelector=".ui-tbody" tagName="div" estimateHeight=rowHeight staticHeight=true bufferSize=5 as |item index|}}
+  {{#ui-tr model=item index=index}}
+    {{yield item index}}
   {{/ui-tr}}
-{{/each}}
+{{/vertical-collection}}
