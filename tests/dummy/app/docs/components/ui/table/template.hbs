@@ -1,75 +1,83 @@
-{{#ui-table--v2}}
-  {{#ui-thead}}
-    {{#ui-th width="83px" column=0 children=0}}ID{{/ui-th}}
-  {{else}}
-    {{#ui-sortable}}
-      {{#ui-th children=2}}
-        <div>Name</div>
-        {{#ui-th width="15%" column=1 children=0}}First Name{{/ui-th}}
-        {{#ui-th width="15%" column=2 children=0}}Last Name{{/ui-th}}
-      {{/ui-th}}
-      {{#ui-th width="1fr" column=3 children=0}}
-        {{#ui-resizable}}
-          Nick Name
-        {{/ui-resizable}}
-      {{/ui-th}}
-      {{#ui-th width="10%" column=4 children=0}}Age{{/ui-th}}
-      {{#ui-th width="10%" column=5 children=0}}SSN{{/ui-th}}
-      {{#ui-th width="20%" column=6 children=0}}Password{{/ui-th}}
-    {{/ui-sortable}}
-  {{/ui-thead}}
+<h1>ui-table</h1>
 
-  {{#unless model.isPending}}
-    {{#ui-tbody}}
-      {{#ui-tr--each model key="id" as |item|}}
-        {{#ui-td column=0}}{{item.id}}{{/ui-td}}
-      {{/ui-tr--each}}
-    {{else}}
-      {{! TODO
-        row.{drilldown,rollup}
-          expand/collapse tree
-        row.{expand,collapse}
-          expand/collapse detail view
-      }}
-      {{#ui-tr--each model key="id" as |item index row|}}
-        {{#fm-form item as |field|}}
-          {{#ui-td column=1}}
-            {{#field.firstName as |in|}}
-              {{in.text}}
-            {{/field.firstName}}
-          {{/ui-td}}
-          {{#ui-td column=2}}
-            {{#field.lastName as |in|}}
-              {{in.text}}
-            {{/field.lastName}}
-          {{/ui-td}}
-          {{#ui-td column=3}}{{item.nickName}}{{/ui-td}}
-          {{#ui-td column=4}}{{item.age}}{{/ui-td}}
-          {{#ui-td column=5}}XXX-XX-XXXX{{/ui-td}}
-          {{#ui-td column=6}}********{{/ui-td}}
-        {{/fm-form}}
-      {{!else
-        TODO use else block here for expanded row,
-        row details locks scroll,
-        with expanded row itself scrollable,
-        plus a max height that is height of body minus row height
-      }}
-      {{/ui-tr--each}}
-    {{/ui-tbody}}
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ui-table"}}
+    {{#ui-table--v2}}
+      {{#ui-thead}}
+        {{#ui-th width="83px" column=0 children=0}}ID{{/ui-th}}
+      {{else}}
+        {{#ui-sortable}}
+          {{#ui-th children=2}}
+            <div>Name</div>
+            {{#ui-th width="15%" column=1 children=0}}First Name{{/ui-th}}
+            {{#ui-th width="15%" column=2 children=0}}Last Name{{/ui-th}}
+          {{/ui-th}}
+          {{#ui-th width="1fr" column=3 children=0}}
+            {{#ui-resizable}}
+              Nick Name
+            {{/ui-resizable}}
+          {{/ui-th}}
+          {{#ui-th width="10%" column=4 children=0}}Age{{/ui-th}}
+          {{#ui-th width="10%" column=5 children=0}}SSN{{/ui-th}}
+          {{#ui-th width="20%" column=6 children=0}}Password{{/ui-th}}
+        {{/ui-sortable}}
+      {{/ui-thead}}
 
-    {{#ui-tfoot}}
-      {{#ui-tr}}
-        {{#ui-td column="0"}}ID{{/ui-td}}
-      {{/ui-tr}}
-    {{else}}
-      {{#ui-tr}}
-        {{#ui-td column=1}}First Name{{/ui-td}}
-        {{#ui-td column=2}}Last Name{{/ui-td}}
-        {{#ui-td column=3}}Nick Name{{/ui-td}}
-        {{#ui-td column=4}}Age{{/ui-td}}
-        {{#ui-td column=5}}SSN{{/ui-td}}
-        {{#ui-td column=6}}Password{{/ui-td}}
-      {{/ui-tr}}
-    {{/ui-tfoot}}
-  {{/unless}}
-{{/ui-table--v2}}
+      {{#unless model.isPending}}
+        {{#ui-tbody}}
+          {{#ui-tr--each model key="id" as |item|}}
+            {{#ui-td column=0}}{{item.id}}{{/ui-td}}
+          {{/ui-tr--each}}
+        {{else}}
+          {{! TODO
+            row.{drilldown,rollup}
+              expand/collapse tree
+            row.{expand,collapse}
+              expand/collapse detail view
+          }}
+          {{#ui-tr--each model key="id" as |item index row|}}
+            {{#fm-form item as |field|}}
+              {{#ui-td column=1}}
+                {{#field.firstName as |in|}}
+                  {{in.text}}
+                {{/field.firstName}}
+              {{/ui-td}}
+              {{#ui-td column=2}}
+                {{#field.lastName as |in|}}
+                  {{in.text}}
+                {{/field.lastName}}
+              {{/ui-td}}
+              {{#ui-td column=3}}{{item.nickName}}{{/ui-td}}
+              {{#ui-td column=4}}{{item.age}}{{/ui-td}}
+              {{#ui-td column=5}}XXX-XX-XXXX{{/ui-td}}
+              {{#ui-td column=6}}********{{/ui-td}}
+            {{/fm-form}}
+          {{!else
+            TODO use else block here for expanded row,
+            row details locks scroll,
+            with expanded row itself scrollable,
+            plus a max height that is height of body minus row height
+          }}
+          {{/ui-tr--each}}
+        {{/ui-tbody}}
+
+        {{#ui-tfoot}}
+          {{#ui-tr}}
+            {{#ui-td column="0"}}ID{{/ui-td}}
+          {{/ui-tr}}
+        {{else}}
+          {{#ui-tr}}
+            {{#ui-td column=1}}First Name{{/ui-td}}
+            {{#ui-td column=2}}Last Name{{/ui-td}}
+            {{#ui-td column=3}}Nick Name{{/ui-td}}
+            {{#ui-td column=4}}Age{{/ui-td}}
+            {{#ui-td column=5}}SSN{{/ui-td}}
+            {{#ui-td column=6}}Password{{/ui-td}}
+          {{/ui-tr}}
+        {{/ui-tfoot}}
+      {{/unless}}
+    {{/ui-table--v2}}
+  {{/demo.example}}
+
+  {{demo.snippet "ui-table.hbs"}}
+{{/docs-demo}}
