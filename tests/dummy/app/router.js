@@ -20,8 +20,18 @@ Router.map(function() {
     this.route('components/ui/table');
 
     this.route('components/in');
+    this.route('components/in/text');
+    this.route('components/in/toggle');
+    this.route('components/in/select');
+
     this.route('components/fm');
+    this.route('components/fm/form');
+    this.route('components/fm/field');
+    this.route('components/fm/fieldset');
+
     this.route('components/x');
+    this.route('components/x/component');
+    this.route('components/x/resize');
   });
 });
 

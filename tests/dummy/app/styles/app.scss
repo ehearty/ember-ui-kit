@@ -1,4 +1,17 @@
 .docs-section {
+  .docs-snippet {
+    position: initial;
+
+    .copy-btn {
+      float: right;
+      position: initial;
+      top: initial;
+      right: initial;
+      bottom: initial;
+      left: initial;
+    }
+  }
+
   .ui-anchor-switch {
     max-height: 20vh;
   }

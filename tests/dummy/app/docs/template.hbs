@@ -18,8 +18,28 @@
       {{/nav.subnav}}
 
       {{subnav.item 'FM' 'docs.components/fm'}}
+
+      {{#nav.subnav as |subnav|}}
+        {{subnav.item 'Form' 'docs.components/fm/form'}}
+        {{subnav.item 'Field' 'docs.components/fm/field'}}
+        {{subnav.item 'Fieldset' 'docs.components/fm/fieldset'}}
+      {{/nav.subnav}}
+
       {{subnav.item 'IN' 'docs.components/in'}}
+
+      {{#nav.subnav as |subnav|}}
+        {{subnav.item 'Text' 'docs.components/in/text'}}
+        {{subnav.item 'Toggle' 'docs.components/in/toggle'}}
+        {{subnav.item 'Select' 'docs.components/in/select'}}
+      {{/nav.subnav}}
+
       {{subnav.item 'X' 'docs.components/x'}}
+
+      {{#nav.subnav as |subnav|}}
+        {{subnav.item 'Component' 'docs.components/x/component'}}
+        {{subnav.item 'Resize' 'docs.components/x/resize'}}
+      {{/nav.subnav}}
+
     {{/nav.subnav}}
 
     {{!nav.item 'API Reference' 'docs.api'}}
