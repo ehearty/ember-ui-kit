@@ -1,0 +1,16 @@
+.ui-tr--even {
+  background: lightblue;
+}
+
+.ui-tr {
+  height: 56px;
+}
+.ui-table--v2 {
+  max-height: 80vh;
+}
+
+.ui-td,
+.ui-th[data-column-children="0"] {
+  padding: 0 10px;
+}
+
