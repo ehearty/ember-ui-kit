@@ -1,0 +1,11 @@
+.ui-button {
+  margin: 0.25em;
+  padding: 0.5em 1em;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 100vw;
+
+  &:hover {
+    background: lightgray;
+  }
+}
