@@ -1,9 +1,8 @@
 <h1>in-select</h1>
 
 {{#docs-demo as |demo|}}
-  {{#demo.example name="in-select"}}
-    {{#in-select value from=list as |list|}}
-    <button>BTN</button>
+  {{#demo.example name="in-select--native"}}
+    {{#in-select value from=(array "apple" "orange" "banana") as |list|}}
       <select>
         {{#each list as |item|}}
           <option value="{{item}}">{{item}}</option>
@@ -11,12 +10,13 @@
       </select>
     {{/in-select}}
   {{/demo.example}}
+
+  {{demo.snippet "in-select--native.hbs"}}
 {{/docs-demo}}
 
 {{#docs-demo as |demo|}}
-  {{#demo.example name="docs-demo-basic"}}
-    {{#in-select value from=list as |list|}}
-      Select
+  {{#demo.example name="in-select--radio"}}
+    {{#in-select value from=(array "apple" "orange" "banana") as |list|}}
       {{#each list as |item|}}
         <label>
           <input type="radio" name="list" value="{{item}}"> {{item}}
@@ -24,4 +24,6 @@
       {{/each}}
     {{/in-select}}
   {{/demo.example}}
+
+  {{demo.snippet "in-select--radio.hbs"}}
 {{/docs-demo}}
