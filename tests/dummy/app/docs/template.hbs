@@ -2,6 +2,19 @@
   {{#viewer.nav as |nav|}}
     {{nav.item 'Home' 'docs.index'}}
 
+    {{nav.item 'Architecture' 'docs.architecture'}}
+
+    {{#nav.subnav as |subnav|}}
+      {{subnav.item 'Z-Index' 'docs.architecture/z-index'}}
+    {{/nav.subnav}}
+
+    {{nav.item 'Cookbook' 'docs.cookbook'}}
+
+    {{#nav.subnav as |subnav|}}
+      {{subnav.item 'Modal' 'docs.cookbook/modal'}}
+      {{subnav.item 'Table' 'docs.cookbook/table'}}
+    {{/nav.subnav}}
+
     {{nav.item 'Components' 'docs.components'}}
 
     {{#nav.subnav as |subnav|}}

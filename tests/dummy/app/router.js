@@ -8,6 +8,14 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('docs', function() {
+    this.route('architecture');
+    this.route('architecture/z-index');
+
+    this.route('cookbook');
+    this.route('cookbook/modal');
+    this.route('cookbook/table');
+    this.route('cookbook/table/sortable-column');
+
     this.route('components');
 
     this.route('components/ui');
