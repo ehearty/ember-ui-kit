@@ -1,0 +1,17 @@
+{
+  "data": {
+    "type": "project",
+    "id": "ember-ui-kit",
+    "attributes": {},
+    "relationships": {
+      "project-versions": {
+        "data": [
+          {
+            "type": "project-version",
+            "id": "ember-ui-kit-0.10.6+e883ef22"
+          }
+        ]
+      }
+    }
+  }
+}
