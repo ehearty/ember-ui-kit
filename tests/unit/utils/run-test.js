@@ -6,7 +6,7 @@ module('Unit | Utility | run');
 
 test('observerOnce', function(assert) {
   let order = [];
-  let once = observerOnce(function() {
+  let once = observerOnce('target', function() {
     order.push('action');
   });
 
@@ -25,7 +25,7 @@ test('observerOnce', function(assert) {
 
 test('observerOnceIn', function(assert) {
   let order = [];
-  let once = observerOnceIn('afterRender', function() {
+  let once = observerOnceIn('afterRender', 'target', function() {
     order.push('afterRender');
   });
 
