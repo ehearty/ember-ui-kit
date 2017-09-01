@@ -104,7 +104,7 @@ export default Ember.Component.extend({
     let rowHeight = this.get('rowHeight');
 
     let block = this.get('block');
-    let start = this.get('bufferStart');
+    //let start = this.get('bufferStart');
 
     block.css({
       //marginTop: rowHeight * start,
