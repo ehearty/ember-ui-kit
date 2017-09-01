@@ -1,0 +1,111 @@
+{
+  "data": {
+    "id": "UI.BaseInputComponent-0.11.0",
+    "type": "class",
+    "attributes": {
+      "name": "UI.BaseInputComponent",
+      "shortname": "UI.BaseInputComponent",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "input",
+      "namespace": "UI",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-base.js",
+      "line": 4,
+      "access": "protected",
+      "tagname": "",
+      "methods": [],
+      "events": [
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/x-resize/component.js",
+          "line": 33,
+          "itemtype": "event",
+          "name": "on-resize-x",
+          "class": "UI.BaseInputComponent",
+          "module": "ui"
+        },
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/x-resize/component.js",
+          "line": 40,
+          "itemtype": "event",
+          "name": "on-resize-y",
+          "class": "UI.BaseInputComponent",
+          "module": "ui"
+        },
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-base.js",
+          "line": 31,
+          "itemtype": "event",
+          "name": "on-focus-in",
+          "class": "UI.BaseInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        },
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-base.js",
+          "line": 43,
+          "itemtype": "event",
+          "name": "on-focus-out",
+          "class": "UI.BaseInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        },
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-base.js",
+          "line": 55,
+          "itemtype": "event",
+          "name": "on-change",
+          "class": "UI.BaseInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        }
+      ],
+      "properties": [
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-base.js",
+          "line": 19,
+          "access": "protected",
+          "tagname": "",
+          "itemtype": "property",
+          "name": "isFocused",
+          "class": "UI.BaseInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        },
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-base.js",
+          "line": 25,
+          "access": "protected",
+          "tagname": "",
+          "itemtype": "property",
+          "name": "isBlurred",
+          "class": "UI.BaseInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        }
+      ]
+    },
+    "relationships": {
+      "parent-class": {
+        "data": null
+      },
+      "descendants": {
+        "data": []
+      },
+      "module": {
+        "data": {
+          "id": "input",
+          "type": "module"
+        }
+      },
+      "project-version": {
+        "data": {
+          "type": "project-version",
+          "id": "ember-ui-kit-0.11.0"
+        }
+      }
+    }
+  }
+}

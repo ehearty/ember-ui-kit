@@ -1,0 +1,119 @@
+{
+  "data": {
+    "type": "project-version",
+    "id": "ember-ui-kit-0.11.0",
+    "relationships": {
+      "classes": {
+        "data": [
+          {
+            "id": "UI.FormFieldComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.FormFieldsetComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.FormComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.SelectInputComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.TextInputComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.ToggleInputComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.BackdropComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.DraggableComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.PositionComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.ResizableComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.SortableComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "ui-table.tbody-each-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "ui-table.tbody-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "ui-table.td-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "ui-table.tfoot-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "ui-table.th-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "ui-table.thead-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "ui-table.tr-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "ComponentComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.BaseInputComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.ScrollableComponent-0.11.0",
+            "type": "class"
+          },
+          {
+            "id": "UI.TableComponent-0.11.0",
+            "type": "class"
+          }
+        ]
+      },
+      "modules": {
+        "data": [
+          {
+            "id": "form-0.11.0",
+            "type": "module"
+          },
+          {
+            "id": "input-0.11.0",
+            "type": "module"
+          },
+          {
+            "id": "ui-0.11.0",
+            "type": "module"
+          }
+        ]
+      }
+    },
+    "attributes": {
+      "version": "0.11.0"
+    }
+  }
+}

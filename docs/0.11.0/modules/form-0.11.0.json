@@ -1,0 +1,51 @@
+{
+  "data": {
+    "id": "form-0.11.0",
+    "type": "module",
+    "attributes": {
+      "name": "form",
+      "submodules": {},
+      "elements": {},
+      "classes": {
+        "UI.FormFieldComponent": 1,
+        "UI.FormFieldsetComponent": 1,
+        "UI.FormComponent": 1
+      },
+      "fors": {},
+      "namespaces": {
+        "UI": 1
+      },
+      "tag": "module",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/fm-form/component.js",
+      "line": 3,
+      "description": "<div class=\"docs-md\"><p>The <code>form</code> module consists of components that deals with form\nand validation. The <code>form</code> module components are separate\nfrom <code>input</code> module to provide validation.</p>\n</div>",
+      "access": "private",
+      "tagname": "",
+      "itemtype": "main"
+    },
+    "relationships": {
+      "classes": {
+        "data": [
+          {
+            "type": "class",
+            "id": "UI.FormFieldComponent"
+          },
+          {
+            "type": "class",
+            "id": "UI.FormFieldsetComponent"
+          },
+          {
+            "type": "class",
+            "id": "UI.FormComponent"
+          }
+        ]
+      },
+      "project-version": {
+        "data": {
+          "type": "project-version",
+          "id": "ember-ui-kit-0.11.0"
+        }
+      }
+    }
+  }
+}

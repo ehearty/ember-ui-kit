@@ -1,0 +1,93 @@
+{
+  "data": {
+    "id": "UI.TextInputComponent-0.11.0",
+    "type": "class",
+    "attributes": {
+      "name": "UI.TextInputComponent",
+      "shortname": "UI.TextInputComponent",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "input",
+      "namespace": "UI",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+      "line": 5,
+      "access": "public",
+      "tagname": "",
+      "methods": [],
+      "events": [
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "line": 58,
+          "itemtype": "event",
+          "name": "on-input",
+          "class": "UI.TextInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        },
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "line": 67,
+          "itemtype": "event",
+          "name": "on-enter-key",
+          "class": "UI.TextInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        },
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "line": 70,
+          "itemtype": "event",
+          "name": "on-escape-key",
+          "class": "UI.TextInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        },
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "line": 73,
+          "itemtype": "event",
+          "name": "on-backspace-key",
+          "class": "UI.TextInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        }
+      ],
+      "properties": [
+        {
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "line": 42,
+          "access": "protected",
+          "tagname": "",
+          "itemtype": "property",
+          "name": "inputElement",
+          "class": "UI.TextInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        }
+      ]
+    },
+    "relationships": {
+      "parent-class": {
+        "data": null
+      },
+      "descendants": {
+        "data": []
+      },
+      "module": {
+        "data": {
+          "id": "input",
+          "type": "module"
+        }
+      },
+      "project-version": {
+        "data": {
+          "type": "project-version",
+          "id": "ember-ui-kit-0.11.0"
+        }
+      }
+    }
+  }
+}
