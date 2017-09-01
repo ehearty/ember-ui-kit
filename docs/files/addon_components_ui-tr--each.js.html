@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>ui-table.tbody-each - ember-ui-kit</title>
+    <title>addon/components/ui-tr--each.js - ember-ui-kit</title>
     <meta name="description" content="The default blueprint for ember-cli addons.">
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
@@ -137,100 +137,135 @@
                 <div class="apidocs">
                     <div id="docs-main">
                         <div class="content">
-
-
 <div class="page-header">
-    <h1> <i class="fa fa-bookmark-o" aria-hidden="true"></i> ui-table.tbody-each Class
-            <a class="pull-right file-edit" href="https://github.com/ming-codes/ember-ui-kit/blob/258d148d/addon/components/ui-table/tbody-each.js#L26" target="_blank">
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            </a>
-    </h1>
+    <h1><i class="fa fa-file-code-o" aria-hidden="true"></i>  File</h1>
 </div>
 
-  <p class="private-class">Private</p>
+<div class="file">
+    <pre class="prettyprint linenums">
+import Ember from &#x27;ember&#x27;;
+import layout from &#x27;../templates/components/ui-tr--each&#x27;;
 
+export default Ember.Component.extend({
+  classNames: &#x27;ui-tr--each&#x27;,
+  layout,
 
-<div class="content-meta">
+  /**
+   * @attribute {} model
+   */
+  model: null,
 
+  /**
+   * @attribute {} key
+   */
+  key: null,
 
-            Module: <a href="../modules/ui.html">ui</a>
+  initialRenderCount: Ember.computed(&#x27;model.[]&#x27;, function() {
+    return Math.min(2, this.get(&#x27;model.length&#x27;));
+  }).readOnly(),
 
+  didInsertElement() {
+    this._super(...arguments);
 
-        <div class="foundat">
-            Defined In: <a href="https://github.com/ming-codes/ember-ui-kit/blob/258d148d/addon/components/ui-table/tbody-each.js#L26">addon/components/ui-table/tbody-each.js:26</a>
-        </div>
-</div>
+    this.set(&#x27;rowHeight&#x27;, this.$(&#x27;.ui-tr--measure .ui-tr&#x27;).outerHeight(true));
+  },
 
+  //// TODO flatten tree model
+  //modelNormalized: Ember.computed.readOnly(&#x27;model&#x27;),
 
+  //rowHeight: Ember.computed(function() {
+  //  return this.$(&#x27;.ui-tr--measure .ui-tr&#x27;).outerHeight(true);
+  //}).readOnly(),
 
-  <div class="class-description">
-  <p><code>tbody-each</code> is an alternative implementation
-of <code>tbody</code> that supports virtual buffered rows.</p>
-<p>Advanced Usage:</p>
-<pre class="code prettyprint"><code class="language-handlebars">{{#ui-table as |t|}}
-  {{#t.body-each (Select users) as |t user|}}
-   {{#t.r click=(action user.toggle) as |t|}}
-     {{#t.d}}{{user.id}}{{/t.d}}
-     {{#t.d}}{{user.name}}{{/t.d}}
-     {{#t.d}}{{user.address}}{{/t.d}}
-   {{/t.r}}
-  {{/t.body}}
-{{/ui-table}}
-</code></pre>
-<p>It's public interface is very similar to tbody.
-<code>tbody-each</code> trades for faster initial rendering
-time for slightly worse scroll performance.</p>
-<p>See also <a href="./ui-table.tbody.html">tbody</a></p>
+  //bufferSize: Ember.computed(&#x27;rowHeight&#x27;, &#x27;modelNormalized.length&#x27;, function() {
+  //  let screenWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  //  let screenHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  //  let rowHeight = this.get(&#x27;rowHeight&#x27;);
+  //  let len = this.get(&#x27;modelNormalized.length&#x27;);
 
-  </div>
+  //  let computed = Math.ceil(Math.max(screenWidth, screenHeight) / rowHeight);
 
-<div>
-    <div class="page-section">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#tab_index" aria-controls="tab_index" role="tab" data-toggle="tab">Index</a></li>
+  //  return Math.min(computed, len);
+  //}),
+  //bufferStart: 0,
+  //buffer: Ember.computed(&#x27;bufferSize&#x27;, function() {
+  //  let size = this.get(&#x27;bufferSize&#x27;);
 
+  //  return Ember.A(Array.from({ length: size }).map(function(fill, index) {
+  //    return Ember.Object.create({
+  //      id: index
+  //    })
+  //  }));
+  //}).readOnly(),
 
+  //bufferContent: Ember.computed(&#x27;modelNormalized.[]&#x27;, &#x27;bufferStart&#x27;, &#x27;bufferSize&#x27;, function() {
+  //  let model = this.get(&#x27;modelNormalized&#x27;);
+  //  let start = this.get(&#x27;bufferStart&#x27;);
+  //  let size = this.get(&#x27;bufferSize&#x27;);
 
-        </ul>
+  //  return model.slice(start, start + size).map((item, index) =&gt; {
+  //    return {
+  //      model: item,
+  //      index: start + index
+  //    };
+  //  });
+  //}).readOnly(),
 
-        <!-- Tab panes -->
-        <div class="tab-content">
+  //bufferInPlace: Ember.computed(&#x27;buffer&#x27;, &#x27;bufferContent&#x27;, function() {
+  //  let buffer = this.get(&#x27;buffer&#x27;);
+  //  let content = this.get(&#x27;bufferContent&#x27;);
+  //  let size = content.length;
 
-              <form id="options-form" class="form-inline">
-                  Show:
-                  <label for="api-show-inherited" class="checkbox">
-                      <input type="checkbox" id="api-show-inherited" checked>
-                      Inherited
-                  </label>
-          
-                  <label for="api-show-protected" class="checkbox">
-                      <input type="checkbox" id="api-show-protected">
-                      Protected
-                  </label>
-          
-                  <label for="api-show-private" class="checkbox">
-                      <input type="checkbox" id="api-show-private">
-                      Private
-                  </label>
-                  <label for="api-show-deprecated" class="checkbox">
-                      <input type="checkbox" id="api-show-deprecated">
-                      Deprecated
-                  </label>
-          
-              </form>
+  //  while (size--) {
+  //    buffer.objectAt(size).setProperties(content[size]);
+  //  }
 
-          <div id="tab_index" role="tabpanel" class="tab-pane active" >
+  //  return buffer;
+  //}).readOnly(),
 
+  block: Ember.computed(function() {
+    return this.$().closest(&#x27;[data-table-block]&#x27;);
+  }).readOnly(),
 
+  //didInsertElement() {
+  //  this._super(...arguments);
 
-          </div>
+  //  let rowHeight = this.get(&#x27;rowHeight&#x27;);
+  //  let ns = this.get(&#x27;elementId&#x27;);
 
+  //  this.$().closest(&#x27;.ui-tbody&#x27;).on(&#x60;scroll.${ns}&#x60;, evt =&gt; {
+  //    Ember.run(this, this.set, &#x27;bufferStart&#x27;, Math.floor(evt.target.scrollTop / rowHeight));
+  //  });
+  //},
 
+  //willDestroyElement() {
+  //  this._super(...arguments);
 
+  //  let ns = this.get(&#x27;elementId&#x27;);
 
-      </div>
-    </div>
+  //  this.$().closest(&#x27;.ui-tbody&#x27;).off(&#x60;.${ns}&#x60;);
+  //},
+
+  didRender() {
+    this._super(...arguments);
+
+    let length = this.get(&#x27;model.length&#x27;);
+    let rowHeight = this.get(&#x27;rowHeight&#x27;);
+
+    let block = this.get(&#x27;block&#x27;);
+    //let start = this.get(&#x27;bufferStart&#x27;);
+
+    block.css({
+      //marginTop: rowHeight * start,
+      height: rowHeight * length
+    });
+  }
+
+}).reopenClass({
+  positionalParams: [&#x27;model&#x27;]
+});
+
+    </pre>
 </div>
                         </div>
                     </div>

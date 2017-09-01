@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>ui-table.tbody-each - ember-ui-kit</title>
+    <title>addon/components/ui-thead.js - ember-ui-kit</title>
     <meta name="description" content="The default blueprint for ember-cli addons.">
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
@@ -137,100 +137,143 @@
                 <div class="apidocs">
                     <div id="docs-main">
                         <div class="content">
-
-
 <div class="page-header">
-    <h1> <i class="fa fa-bookmark-o" aria-hidden="true"></i> ui-table.tbody-each Class
-            <a class="pull-right file-edit" href="https://github.com/ming-codes/ember-ui-kit/blob/258d148d/addon/components/ui-table/tbody-each.js#L26" target="_blank">
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            </a>
-    </h1>
+    <h1><i class="fa fa-file-code-o" aria-hidden="true"></i>  File</h1>
 </div>
 
-  <p class="private-class">Private</p>
+<div class="file">
+    <pre class="prettyprint linenums">
+import Ember from &#x27;ember&#x27;;
+import layout from &#x27;../templates/components/ui-thead&#x27;;
 
+import Styleable from &#x27;../mixins/styleable&#x27;;
 
-<div class="content-meta">
+import { layout as cssLayout } from &#x27;../utils/dom&#x27;;
 
+/* global elementResizeDetectorMaker */
+let detector = elementResizeDetectorMaker({
+  strategy: &#x27;scroll&#x27;
+});
 
-            Module: <a href="../modules/ui.html">ui</a>
+export default Ember.Component.extend(Styleable, {
+  classNames: &#x27;ui-thead&#x27;,
+  layout,
 
+  /**
+   * @attribute {} breakpoints
+   */
+  breakpoints: null,
 
-        <div class="foundat">
-            Defined In: <a href="https://github.com/ming-codes/ember-ui-kit/blob/258d148d/addon/components/ui-table/tbody-each.js#L26">addon/components/ui-table/tbody-each.js:26</a>
-        </div>
-</div>
+  leafNodes: Ember.computed(function() {
+    return this.$(&#x27;[data-column-children=&quot;0&quot;]&#x27;);
+  }).readOnly(),
 
+  ns: Ember.computed(function() {
+    return this.$().closest(&#x27;.ui-table--v2&#x27;).attr(&#x27;id&#x27;);
+  }).readOnly(),
 
+  didInsertElement() {
+    this._super(...arguments);
 
-  <div class="class-description">
-  <p><code>tbody-each</code> is an alternative implementation
-of <code>tbody</code> that supports virtual buffered rows.</p>
-<p>Advanced Usage:</p>
-<pre class="code prettyprint"><code class="language-handlebars">{{#ui-table as |t|}}
-  {{#t.body-each (Select users) as |t user|}}
-   {{#t.r click=(action user.toggle) as |t|}}
-     {{#t.d}}{{user.id}}{{/t.d}}
-     {{#t.d}}{{user.name}}{{/t.d}}
-     {{#t.d}}{{user.address}}{{/t.d}}
-   {{/t.r}}
-  {{/t.body}}
-{{/ui-table}}
-</code></pre>
-<p>It's public interface is very similar to tbody.
-<code>tbody-each</code> trades for faster initial rendering
-time for slightly worse scroll performance.</p>
-<p>See also <a href="./ui-table.tbody.html">tbody</a></p>
+    //let leaves = this.get(&#x27;leafNodes&#x27;);
+    //let table = this.$().closest(&#x27;.ui-table--v2&#x27;);
 
-  </div>
+    detector.listenTo(this.$(&#x27;.ui-thead__resizer&#x27;).get(0), this.rerender = Ember.run.bind(this, this.rerender));
 
-<div>
-    <div class="page-section">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#tab_index" aria-controls="tab_index" role="tab" data-toggle="tab">Index</a></li>
+    this.$(&#x27;.ui-sortable&#x27;).on(&#x27;sortupdate&#x27;, (evt, { item }) =&gt; {
+      //let block = item.parentsUntil(&#x27;.ui-thead&#x27;, &#x27;[data-table-block]&#x27;).attr(&#x27;data-table-block&#x27;);
+      let ordered = item.closest(&#x27;.ui-thead&#x27;).find(&#x27;.ui-th[data-column-id]&#x27;);
 
+      //let targets = item.find(&#x27;.ui-th&#x27;).addBack().filter(&#x27;[data-column-id]&#x27;)
+      //  .map((index, element) =&gt; Ember.$(element).attr(&#x27;data-column-id&#x27;))
+      //let after = Ember.$(ordered[ordered.index(ordered.filter(&#x60;[data-column-id=&quot;${targets.get(-1)}&quot;]&#x60;)) + 1])
+      //  .attr(&#x27;data-column-id&#x27;);
+      //let selector = targets.toArray().map(target =&gt; &#x60;[data-column-id=&quot;${target}&quot;]&#x60;).join();
 
+      // &#x60;target&#x60; is moved to before &#x60;after&#x60;
 
-        </ul>
+      //table.find(&#x60;[data-table-block=${block}] .ui-tr&#x60;).each(function() {
+      //  let tr = Ember.$(this);
 
-        <!-- Tab panes -->
-        <div class="tab-content">
+      //  if (typeof after !== &#x27;undefined&#x27;) {
+      //    tr.find(selector).insertBefore(tr.find(&#x60;[data-column-id=&quot;${after}&quot;]&#x60;));
+      //  }
+      //  else {
+      //    tr.find(selector).appendTo(tr);
+      //  }
+      //});
 
-              <form id="options-form" class="form-inline">
-                  Show:
-                  <label for="api-show-inherited" class="checkbox">
-                      <input type="checkbox" id="api-show-inherited" checked>
-                      Inherited
-                  </label>
-          
-                  <label for="api-show-protected" class="checkbox">
-                      <input type="checkbox" id="api-show-protected">
-                      Protected
-                  </label>
-          
-                  <label for="api-show-private" class="checkbox">
-                      <input type="checkbox" id="api-show-private">
-                      Private
-                  </label>
-                  <label for="api-show-deprecated" class="checkbox">
-                      <input type="checkbox" id="api-show-deprecated">
-                      Deprecated
-                  </label>
-          
-              </form>
+      ordered.attr(&#x27;data-column-order&#x27;, index =&gt; index);
 
-          <div id="tab_index" role="tabpanel" class="tab-pane active" >
+      Ember.run(this, &#x27;rerender&#x27;);
+    });
+    this.$().on(&#x27;resize&#x27;, Ember.run.bind(this, function() {
+      this.rerender();
+    }));
+  },
 
+  didRender() {
+    this._super(...arguments);
 
+    let ns = this.get(&#x27;ns&#x27;);
+    let nodes = this.get(&#x27;leafNodes&#x27;).toArray();
+    let widths = nodes.map(el =&gt; Ember.$(el).attr(&#x27;data-column-width&#x27;));
+    let paddings = nodes
+      .map(Ember.$)
+      .map(el =&gt; {
+        let padding = el.attr(&#x27;data-padding&#x27;);
 
-          </div>
+        if (!padding) {
+          let { &#x27;padding-left&#x27;: left, &#x27;padding-right&#x27;: right } = el.css([ &#x27;padding-left&#x27;, &#x27;padding-right&#x27; ]);
 
+          padding = &#x60;${parseFloat(left)},${parseFloat(right)}&#x60;;
 
+          el.attr(&#x27;data-padding&#x27;, padding);
+        }
 
+        return padding.split(&#x27;,&#x27;).map(Number);
+      });
 
-      </div>
-    </div>
+    // TODO handle breakpoints
+    cssLayout(this.$().width(), widths).forEach((width, index) =&gt; {
+      let [ left, right ] = paddings[index];
+      let node = Ember.$(nodes[index]);
+      let order = node.attr(&#x27;data-column-order&#x27;);
+      let id = node.attr(&#x27;data-column-id&#x27;);
+
+      if (left + right &gt; width) {
+        let ratio = width / (left + right);
+
+        this.style(&#x60;#${ns} [data-column-id=&quot;${id}&quot;]&#x60;, {
+          &#x27;order&#x27;: order || null,
+          &#x27;padding-left&#x27;: &#x60;${left * ratio}px&#x60;,
+          &#x27;padding-right&#x27;: &#x60;${right * ratio}px&#x60;,
+          &#x27;width&#x27;: &#x60;${width}px&#x60;,
+          &#x27;min-width&#x27;: &#x60;${width}px&#x60;
+        });
+      }
+      else {
+        this.style(&#x60;#${ns} [data-column-id=&quot;${id}&quot;]&#x60;, {
+          &#x27;order&#x27;: order || null,
+          &#x27;padding-left&#x27;: null,
+          &#x27;padding-right&#x27;: null,
+          &#x27;width&#x27;: &#x60;${width}px&#x60;,
+          &#x27;min-width&#x27;: &#x60;${width}px&#x60;
+        });
+      }
+    });
+  },
+
+  willDestroyElement() {
+    this._super(...arguments);
+
+    detector.removeListener(this.$(&#x27;.ui-thead__resizer&#x27;).get(0), this.rerender);
+
+    this.$().off();
+  }
+});
+
+    </pre>
 </div>
                         </div>
                     </div>

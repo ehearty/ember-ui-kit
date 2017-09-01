@@ -3,7 +3,7 @@
         "name": "ember-ui-kit",
         "description": "The default blueprint for ember-cli addons.",
         "url": "https://github.com/ming-codes/ember-ui-kit",
-        "version": "0.10.6.20e7f40e"
+        "version": "0.11.0.258d148d"
     },
     "files": {
         "addon/components/fm-field/component.js": {
@@ -259,6 +259,34 @@
             "namespaces": {
                 "UI": 1
             }
+        },
+        "addon/components/ui-td.js": {
+            "name": "addon/components/ui-td.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/ui-th.js": {
+            "name": "addon/components/ui-th.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/ui-thead.js": {
+            "name": "addon/components/ui-thead.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/ui-tr--each.js": {
+            "name": "addon/components/ui-tr--each.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
         },
         "addon/utils/microstate.js": {
             "name": "addon/utils/microstate.js",
@@ -1185,6 +1213,76 @@
             "default": "true",
             "type": "boolean|object",
             "class": "UI.ScrollableComponent",
+            "module": "ui",
+            "namespace": "UI"
+        },
+        {
+            "file": "addon/components/ui-td.js",
+            "line": 12,
+            "itemtype": "attribute",
+            "name": "column",
+            "type": "",
+            "class": "",
+            "module": "ui",
+            "namespace": "UI"
+        },
+        {
+            "file": "addon/components/ui-th.js",
+            "line": 14,
+            "itemtype": "attribute",
+            "name": "width",
+            "type": "",
+            "class": "",
+            "module": "ui",
+            "namespace": "UI"
+        },
+        {
+            "file": "addon/components/ui-th.js",
+            "line": 19,
+            "itemtype": "attribute",
+            "name": "column",
+            "type": "",
+            "class": "",
+            "module": "ui",
+            "namespace": "UI"
+        },
+        {
+            "file": "addon/components/ui-th.js",
+            "line": 24,
+            "itemtype": "attribute",
+            "name": "children",
+            "type": "",
+            "class": "",
+            "module": "ui",
+            "namespace": "UI"
+        },
+        {
+            "file": "addon/components/ui-thead.js",
+            "line": 17,
+            "itemtype": "attribute",
+            "name": "breakpoints",
+            "type": "",
+            "class": "",
+            "module": "ui",
+            "namespace": "UI"
+        },
+        {
+            "file": "addon/components/ui-tr--each.js",
+            "line": 8,
+            "itemtype": "attribute",
+            "name": "model",
+            "type": "",
+            "class": "",
+            "module": "ui",
+            "namespace": "UI"
+        },
+        {
+            "file": "addon/components/ui-tr--each.js",
+            "line": 13,
+            "itemtype": "attribute",
+            "name": "key",
+            "type": "",
+            "class": "",
             "module": "ui",
             "namespace": "UI"
         },
