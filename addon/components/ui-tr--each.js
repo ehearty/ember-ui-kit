@@ -15,6 +15,10 @@ export default Ember.Component.extend({
    */
   key: null,
 
+  initialRenderCount: Ember.computed('model.[]', function() {
+    return Math.min(2, this.get('model.length'));
+  }).readOnly(),
+
   didInsertElement() {
     this._super(...arguments);
 

@@ -2,7 +2,7 @@
   <div class="ui-tr"></div>
 </div>
 {{#if rowHeight}}
-  {{#vertical-collection model containerSelector=".ui-tbody" key=key estimateHeight=rowHeight staticHeight=true bufferSize=5 as |item index|}}
+  {{#vertical-collection model containerSelector=".ui-tbody" key=key estimateHeight=rowHeight staticHeight=true bufferSize=5 initialRenderCount=initialRenderCount as |item index|}}
     {{#ui-tr model=item index=index}}
       {{yield item index}}
     {{/ui-tr}}
