@@ -12,7 +12,7 @@
       "extension_for": [],
       "module": "ui",
       "namespace": "UI",
-      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/ui-backdrop/component.js",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/ui-backdrop/component.js",
       "line": 4,
       "description": "<div class=\"docs-md\"><p><code>ui-backdrop</code> is a simple component to put a mask\nover the screen. Use with <code>ui-position</code> to create\nmodal.</p>\n</div>",
       "access": "public",
@@ -20,7 +20,7 @@
       "methods": [],
       "events": [
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/ui-anchor-switch/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/ui-anchor-switch/component.js",
           "line": 49,
           "itemtype": "event",
           "name": "on-change",

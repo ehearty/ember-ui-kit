@@ -17,7 +17,7 @@
         "UI": 1
       },
       "tag": "module",
-      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-base.js",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-base.js",
       "line": 4,
       "description": "<div class=\"docs-md\"><p>The <code>input</code> module consists of components that deals with\nobtaining user inputs. The components themselves does not\nprovide validation, but integrates with <code>form</code> module\ncomponents for that functionality</p>\n</div>",
       "access": "public",

@@ -12,7 +12,7 @@
       "extension_for": [],
       "module": "ui",
       "namespace": "UI",
-      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/ui-position/component.js",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/ui-position/component.js",
       "line": 20,
       "description": "<div class=\"docs-md\"><p><code>ui-position</code> is a simple wrapper around\n<a href=\"http://api.jqueryui.com/position/\">jQuery UI position</a></p>\n</div>",
       "access": "public",

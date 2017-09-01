@@ -12,14 +12,14 @@
       "extension_for": [],
       "module": "input",
       "namespace": "UI",
-      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-text/component.js",
       "line": 5,
       "access": "public",
       "tagname": "",
       "methods": [],
       "events": [
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-text/component.js",
           "line": 58,
           "itemtype": "event",
           "name": "on-input",
@@ -28,7 +28,7 @@
           "namespace": "UI"
         },
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-text/component.js",
           "line": 67,
           "itemtype": "event",
           "name": "on-enter-key",
@@ -37,7 +37,7 @@
           "namespace": "UI"
         },
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-text/component.js",
           "line": 70,
           "itemtype": "event",
           "name": "on-escape-key",
@@ -46,7 +46,7 @@
           "namespace": "UI"
         },
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-text/component.js",
           "line": 73,
           "itemtype": "event",
           "name": "on-backspace-key",
@@ -57,7 +57,7 @@
       ],
       "properties": [
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-text/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-text/component.js",
           "line": 42,
           "access": "protected",
           "tagname": "",

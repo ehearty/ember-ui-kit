@@ -12,7 +12,7 @@
       "extension_for": [],
       "module": "input",
       "namespace": "UI",
-      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-select/component.js",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-select/component.js",
       "line": 5,
       "access": "public",
       "tagname": "",
@@ -20,7 +20,7 @@
       "events": [],
       "properties": [
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-select/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-select/component.js",
           "line": 48,
           "itemtype": "property",
           "name": "isFocused",
@@ -31,7 +31,7 @@
           "namespace": "UI"
         },
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-select/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-select/component.js",
           "line": 54,
           "itemtype": "property",
           "name": "isFocused",
@@ -42,7 +42,7 @@
           "namespace": "UI"
         },
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-select/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-select/component.js",
           "line": 64,
           "itemtype": "property",
           "name": "list",

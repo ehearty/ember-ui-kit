@@ -16,7 +16,7 @@
         "UI": 1
       },
       "tag": "module",
-      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/fm-form/component.js",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/fm-form/component.js",
       "line": 3,
       "description": "<div class=\"docs-md\"><p>The <code>form</code> module consists of components that deals with form\nand validation. The <code>form</code> module components are separate\nfrom <code>input</code> module to provide validation.</p>\n</div>",
       "access": "private",

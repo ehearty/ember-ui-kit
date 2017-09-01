@@ -12,7 +12,7 @@
       "extension_for": [],
       "module": "input",
       "namespace": "UI",
-      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-toggle/component.js",
+      "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-toggle/component.js",
       "line": 6,
       "description": "<div class=\"docs-md\"><p><code>{{in-toggle}}</code> is a simple input component that respond\nto click to toggle. The implementation does not provide\nspecific styling. You are free style it in anyway you like:\nbutton, switch, or checkbox.</p>\n</div>",
       "access": "public",
@@ -21,7 +21,7 @@
       "events": [],
       "properties": [
         {
-          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-WSCuDjvE.tmp/components/in-toggle/component.js",
+          "file": "/Users/mingliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-Ns1rGRQL.tmp/components/in-toggle/component.js",
           "line": 39,
           "access": "protected",
           "tagname": "",
