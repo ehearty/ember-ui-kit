@@ -31,6 +31,12 @@ export default Ember.Component.extend(Composable, {
 
   // attrs }
 
+  init() {
+    this._super(...arguments);
+
+    Ember.deprecate('ui-scrollable is deprecated. Please use overflow: scroll directly');
+  },
+
   viewport: Ember.computed(function() {
     return this.$().children('.ui-scrollable__viewport');
   }).readOnly(),
