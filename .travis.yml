@@ -13,18 +13,7 @@ cache:
     - node_modules
 
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
-      - libnss3
-      - libnss3-tools
-      - libfontconfig1
-      - wget
-      - ca-certificates
-      - apt-transport-https
-      - inotify-tools
+  chrome: stable
 
 env:
   # we recommend testing LTS's and latest stable release (bonus points to beta/canary)
@@ -45,9 +34,9 @@ matrix:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
 before_install:
-
-install:
-  - npm install
+  - npm config set spin false
+  - npm install -g npm@4
+  - npm --version
 
 script:
   # Usually, it's ok to finish the test scenario without reverting
