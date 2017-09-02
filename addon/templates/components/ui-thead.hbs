@@ -1,4 +1,4 @@
-<div class="ui-thead__resizer-content">
+{{#x-resize on-resize-x=(action "rerender")}}
   {{#if (hasBlock "inverse")}}
     <div data-table-block="fixed">
       {{yield}}
@@ -15,5 +15,4 @@
       </div>
     </div>
   {{/if}}
-</div>
-<div class="ui-thead__resizer"></div>
+{{/x-resize}}

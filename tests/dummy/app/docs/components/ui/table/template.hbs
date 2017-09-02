@@ -13,7 +13,7 @@
             {{#ui-th width="15%" column=2 children=0}}Last Name{{/ui-th}}
           {{/ui-th}}
           {{#ui-th width="1fr" column=3 children=0}}
-            {{#ui-resizable}}
+            {{#ui-resizable options=(hash handles="e")}}
               Nick Name
             {{/ui-resizable}}
           {{/ui-th}}
@@ -75,7 +75,6 @@
             {{#ui-td column=6}}Password{{/ui-td}}
           {{/ui-tr}}
         {{/ui-tfoot}}
-        {{debugger}}
       {{/unless}}
     {{/ui-table--v2}}
   {{/demo.example}}

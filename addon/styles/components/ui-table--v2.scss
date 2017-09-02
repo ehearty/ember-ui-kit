@@ -9,8 +9,16 @@
   flex-direction: column;
 }
 
-.ui-thead__resizer-content {
-  align-items: flex-end;
+.ui-thead {
+  .x-resize {
+    display: block;
+  }
+
+  .x-resize__container {
+    align-items: flex-end;
+    flex: 1;
+    min-width: 0;
+  }
 
   .ui-thead__content,
   .ui-sortable {
@@ -37,7 +45,7 @@ occluded-content {
   font-size: 0;
 }
 
-.ui-thead__resizer-content,
+.ui-thead .x-resize__container,
 .ui-tbody,
 .ui-tfoot {
   display: flex;
