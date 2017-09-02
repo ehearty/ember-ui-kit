@@ -1,5 +1,5 @@
 /* eslint-env node */
-var execSync = require('child_process').execSync;
+let execSync = require('child_process').execSync;
 //var RSVP = require('rsvp');
 
 // For details on each option run `ember help release`
@@ -13,9 +13,6 @@ module.exports = {
   // format: 'YYYY-MM-DD',
   // timezone: 'America/Los_Angeles',
 
-  beforeCommit: function(project, versions) {
-    execSync('ember ember-cli-yuidoc', { encoding: 'utf8' });
-    execSync('git add docs', { encoding: 'utf8' });
-    execSync(`git commit -m "Release ${versions.next} docs"`, { encoding: 'utf8' });
+  beforeCommit(project, versions) {
   }
 };
