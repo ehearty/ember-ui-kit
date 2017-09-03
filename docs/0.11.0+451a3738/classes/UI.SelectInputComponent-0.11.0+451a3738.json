@@ -1,0 +1,76 @@
+{
+  "data": {
+    "id": "UI.SelectInputComponent-0.11.0+451a3738",
+    "type": "class",
+    "attributes": {
+      "name": "UI.SelectInputComponent",
+      "shortname": "UI.SelectInputComponent",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "input",
+      "namespace": "UI",
+      "file": "/Users/mliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-FEZL2qap.tmp/components/in-select/component.js",
+      "line": 5,
+      "access": "public",
+      "tagname": "",
+      "methods": [],
+      "events": [],
+      "properties": [
+        {
+          "file": "/Users/mliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-FEZL2qap.tmp/components/in-select/component.js",
+          "line": 48,
+          "itemtype": "property",
+          "name": "isFocused",
+          "access": "private",
+          "tagname": "",
+          "class": "UI.SelectInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        },
+        {
+          "file": "/Users/mliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-FEZL2qap.tmp/components/in-select/component.js",
+          "line": 54,
+          "itemtype": "property",
+          "name": "isFocused",
+          "access": "private",
+          "tagname": "",
+          "class": "UI.SelectInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        },
+        {
+          "file": "/Users/mliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-FEZL2qap.tmp/components/in-select/component.js",
+          "line": 64,
+          "itemtype": "property",
+          "name": "list",
+          "class": "UI.SelectInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        }
+      ]
+    },
+    "relationships": {
+      "parent-class": {
+        "data": null
+      },
+      "descendants": {
+        "data": []
+      },
+      "module": {
+        "data": {
+          "id": "input",
+          "type": "module"
+        }
+      },
+      "project-version": {
+        "data": {
+          "type": "project-version",
+          "id": "ember-ui-kit-0.11.0+451a3738"
+        }
+      }
+    }
+  }
+}
