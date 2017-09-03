@@ -1,8 +1,9 @@
+# `x`
 
-Utility components are components meant to be embeded inside component
+`x` are utility components are components meant to be embeded inside component
 templates and not to be part of any route template.
 
-# x-component
+## x-component
 
 `x-component` is an component to aid in composability. It
 accepts a single argument of either string or closure component
@@ -15,7 +16,7 @@ and renders it.
   {{/demo.example}}
 {{/docs-demo}}
 
-# x-resize
+## x-resize
 
 `x-resize` is a component to help detect element resize. The component
 is designed to be transparent to not interfere with any CSS

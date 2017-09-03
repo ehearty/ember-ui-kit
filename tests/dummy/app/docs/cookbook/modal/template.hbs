@@ -1,0 +1,22 @@
+<h1>Modal</h1>
+
+<p>
+  To make a modal dialog, simply combine the <code>ui-backdrop</code>
+  component with <code>ui-position</code> component.
+</p>
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="cookbook.modal"}}
+    {{ui-button "Show Modal" on-click=(action (mut show) true)}}
+
+    {{#if show}}
+      {{#ui-backdrop on-click=(action (mut show) false)}}
+        {{#ui-position}}
+          Modal
+        {{/ui-position}}
+      {{/ui-backdrop}}
+    {{/if}}
+  {{/demo.example}}
+
+  {{demo.snippet "cookbook.modal.hbs"}}
+{{/docs-demo}}

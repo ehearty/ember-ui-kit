@@ -1,4 +1,26 @@
 <h1>ui-position</h1>
 
-The <code>ui-backdrop</code> and <code>ui-position</code> component
-serves as the basis for z-index management in <code>ember-ui-kit</code>.
+<p>
+  <code>ui-position</code> is a <a href="http://api.jqueryui.com/position/">
+    simple wrapper around jQueryUI's position components</a>.
+</p>
+
+<p>
+  Together with the <code>ui-backdrop</code> component, they form the
+  basis on how <code>ember-ui-kit</code> manages z-index. Please
+  refer to the {{#link-to "docs.architecture/z-index"}}z-index doc
+  {{/link-to}} for details.
+</p>
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ui-position"}}
+    {{#ui-button}}
+      at
+      {{#ui-position options=(hash my="left center" at="right center")}}
+        my
+      {{/ui-position}}
+    {{/ui-button}}
+  {{/demo.example}}
+
+  {{demo.snippet "ui-position.hbs"}}
+{{/docs-demo}}

@@ -13,6 +13,9 @@ Router.map(function() {
 
     this.route('cookbook');
     this.route('cookbook/modal');
+    this.route('cookbook/dialog');
+    this.route('cookbook/popover');
+    this.route('cookbook/tooltip');
     this.route('cookbook/table');
     this.route('cookbook/table/sortable-column');
 

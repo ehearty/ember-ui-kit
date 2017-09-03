@@ -1,8 +1,14 @@
 <h1>ui-sortable</h1>
 
+<p>
+  <code>ui-sortable</code> is a <a href="http://api.jqueryui.com/sortable/">
+    simple wrapper around jQueryUI's sortable components</a>.
+</p>
+
+<p>All options are delegated over.</p>
 {{#docs-demo as |demo|}}
   {{#demo.example name="ui-sortable"}}
-    {{#ui-sortable tagName="ul"}}
+    {{#ui-sortable tagName="ul" options=(hash)}}
       <li>Apple</li>
       <li>Orange</li>
       <li>Banana</li>

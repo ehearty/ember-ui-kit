@@ -1,8 +1,15 @@
 <h1>ui-draggable</h1>
 
+<p>
+  <code>ui-draggable</code> is a <a href="http://api.jqueryui.com/draggable/">
+    simple wrapper around jQueryUI's draggable components</a>.
+</p>
+
+<p>All options are delegated over.</p>
+
 {{#docs-demo as |demo|}}
   {{#demo.example name="ui-draggable"}}
-    {{#ui-draggable}}
+    {{#ui-draggable options=(hash)}}
       DRAG ME
     {{/ui-draggable}}
   {{/demo.example}}
