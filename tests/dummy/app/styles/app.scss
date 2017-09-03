@@ -1,4 +1,17 @@
 .docs-section {
+  .docs-snippet {
+    position: initial;
+
+    .copy-btn {
+      position: initial;
+      top: initial;
+      right: initial;
+      bottom: initial;
+      left: initial;
+      float: right;
+    }
+  }
+
   @import "docs/components/ui/anchor";
   @import "docs/components/ui/button";
   @import "docs/components/ui/table";
