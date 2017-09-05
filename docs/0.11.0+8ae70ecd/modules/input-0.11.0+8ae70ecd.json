@@ -1,0 +1,57 @@
+{
+  "data": {
+    "id": "input-0.11.0+8ae70ecd",
+    "type": "module",
+    "attributes": {
+      "name": "input",
+      "submodules": {},
+      "elements": {},
+      "classes": {
+        "UI.SelectInputComponent": 1,
+        "UI.TextInputComponent": 1,
+        "UI.ToggleInputComponent": 1,
+        "UI.BaseInputComponent": 1
+      },
+      "fors": {},
+      "namespaces": {
+        "UI": 1
+      },
+      "tag": "module",
+      "file": "/Users/mliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-gO1GX5lV.tmp/components/in-base.js",
+      "line": 4,
+      "description": "<div class=\"docs-md\"><p>The <code>input</code> module consists of components that deals with\nobtaining user inputs. The components themselves does not\nprovide validation, but integrates with <code>form</code> module\ncomponents for that functionality</p>\n</div>",
+      "access": "public",
+      "tagname": "",
+      "extends": "UI.BaseInputComponent",
+      "itemtype": "main"
+    },
+    "relationships": {
+      "classes": {
+        "data": [
+          {
+            "type": "class",
+            "id": "UI.SelectInputComponent"
+          },
+          {
+            "type": "class",
+            "id": "UI.TextInputComponent"
+          },
+          {
+            "type": "class",
+            "id": "UI.ToggleInputComponent"
+          },
+          {
+            "type": "class",
+            "id": "UI.BaseInputComponent"
+          }
+        ]
+      },
+      "project-version": {
+        "data": {
+          "type": "project-version",
+          "id": "ember-ui-kit-0.11.0+8ae70ecd"
+        }
+      }
+    }
+  }
+}

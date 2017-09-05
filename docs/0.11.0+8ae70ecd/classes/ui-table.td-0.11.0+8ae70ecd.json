@@ -1,0 +1,44 @@
+{
+  "data": {
+    "id": "ui-table.td-0.11.0+8ae70ecd",
+    "type": "class",
+    "attributes": {
+      "name": "ui-table.td",
+      "shortname": "ui-table.td",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "ui",
+      "namespace": "",
+      "file": "/Users/mliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-gO1GX5lV.tmp/components/ui-table/td.js",
+      "line": 8,
+      "access": "private",
+      "tagname": "",
+      "methods": [],
+      "events": [],
+      "properties": []
+    },
+    "relationships": {
+      "parent-class": {
+        "data": null
+      },
+      "descendants": {
+        "data": []
+      },
+      "module": {
+        "data": {
+          "id": "ui",
+          "type": "module"
+        }
+      },
+      "project-version": {
+        "data": {
+          "type": "project-version",
+          "id": "ember-ui-kit-0.11.0+8ae70ecd"
+        }
+      }
+    }
+  }
+}
