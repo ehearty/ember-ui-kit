@@ -9,6 +9,8 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('docs', function() {
     this.route('architecture');
+    this.route('architecture/component');
+    this.route('architecture/css');
     this.route('architecture/z-index');
 
     this.route('cookbook');
