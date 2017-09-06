@@ -69,6 +69,11 @@ occluded-content {
   vertical-align: bottom;
 }
 
+.ui-th .ui-resizable {
+  display: block;
+  overflow: hidden;
+}
+
 .ui-tbody {
   overflow-y: auto;
   flex: 1;

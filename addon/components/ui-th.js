@@ -49,7 +49,9 @@ export default Ember.Component.extend({
 
     if (!children) {
       this.$().on('resize', (evt, { size: { width } }) => {
-        Ember.run(this, this.set, 'width', `${width}px`);
+        let [ left, right ] = this.$().attr('data-padding').split(',').map(Number);
+
+        Ember.run(this, this.set, 'width', `${width + left + right}px`);
       });
     }
   }
