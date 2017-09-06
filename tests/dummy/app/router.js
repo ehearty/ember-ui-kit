@@ -27,6 +27,7 @@ Router.map(function() {
     this.route('components/ui/backdrop');
     this.route('components/ui/position');
     this.route('components/ui/anchor');
+    this.route('components/ui/button');
     this.route('components/ui/draggable');
     this.route('components/ui/resizable');
     this.route('components/ui/sortable');
