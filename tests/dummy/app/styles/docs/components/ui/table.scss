@@ -11,7 +11,15 @@
 }
 
 .ui-td,
-.ui-th[data-column-children="0"] {
+.ui-th {
   padding: 0 10px;
+}
+
+ui-th ui-th:first-of-type {
+  margin-left: -10px;
+}
+
+ui-th ui-th:last-of-type {
+  margin-right: -10px;
 }
 
