@@ -40,7 +40,11 @@ export default Ember.Component.extend({
       .first();
 
     if (active.length) {
-      this.sendAction('on-change', active.data('case'));
+      this.$().attr('data-suppress-scroll-into-view', 1);
+
+      Ember.run(this, 'sendAction', 'on-change', active.data('case'));
+
+      this.$().attr('data-suppress-scroll-into-view', '');
     }
 
     return cache;

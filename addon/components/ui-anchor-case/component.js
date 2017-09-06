@@ -50,6 +50,11 @@ export default Ember.Component.extend({
   // TODO smooth scroll
   scrollIntoView() {
     let sw = this.$().closest('.ui-anchor-switch');
+
+    if (sw.attr('data-suppress-scroll-into-view')) {
+      return;
+    }
+
     let first = sw.find('.ui-anchor-case').first();
     let target = this.$();
     let offset = target.offset().top - first.offset().top;
