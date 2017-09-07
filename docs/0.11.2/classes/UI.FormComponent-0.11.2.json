@@ -1,0 +1,45 @@
+{
+  "data": {
+    "id": "UI.FormComponent-0.11.2",
+    "type": "class",
+    "attributes": {
+      "name": "UI.FormComponent",
+      "shortname": "UI.FormComponent",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "form",
+      "namespace": "UI",
+      "file": "/Users/mliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-qPJzZSHO.tmp/components/fm-form/component.js",
+      "line": 3,
+      "description": "<div class=\"docs-md\"><p><code>{{fm-form}}</code> component wraps a <code>DS.Model</code> object and yields\n<code>{{fm-field}}</code> with appropriate validations setup. Each <code>{{fm-field}}</code>\nyields more contextual input component to let you choose how to\nrepresent the field.</p>\n<p><code>{{fm-field}}</code> can be interlaced with HTML tags to provide additional\nlayout needs.</p>\n<p>Basic Usage:</p>\n<pre><code class=\"lang-handlebars\"><span class=\"xml\"></span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">fm-form</span> model as |attribute|}}</span><span class=\"xml\">\n  </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">attribute.name</span> as |in|}}</span><span class=\"xml\">\n    </span><span class=\"hljs-template-variable\">{{<span class=\"hljs-builtin-name\">in</span>.text}}</span><span class=\"xml\">\n  </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">attribute.name</span>}}</span><span class=\"xml\">\n  </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">attribute.address</span> as |in|}}</span><span class=\"xml\">\n    </span><span class=\"hljs-template-variable\">{{<span class=\"hljs-builtin-name\">in</span>.text}}</span><span class=\"xml\">\n  </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">attribute.address</span>}}</span><span class=\"xml\">\n</span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">fm-form</span>}}</span><span class=\"xml\"></span>\n</code></pre>\n<p><code>{{fm-form}}</code> integrates with <code>{{ui-table}}</code> to allow editability\nand validability.</p>\n<p>Advanced Usage:</p>\n<pre><code class=\"lang-handlebars\"><span class=\"xml\"></span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">ui-table</span> as |t|}}</span><span class=\"xml\">\n  </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">t.body</span> as |t|}}</span><span class=\"xml\">\n    </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\"><span class=\"hljs-builtin-name\">each</span></span> data as |datum|}}</span><span class=\"xml\">\n      </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">t.r</span> as |t|}}</span><span class=\"xml\">\n        </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">fm-form</span> datum as |attribute|}}</span><span class=\"xml\">\n          </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">t.d</span>}}</span><span class=\"xml\">\n            </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">attribute.name</span> as |in|}}</span><span class=\"xml\">\n              </span><span class=\"hljs-template-variable\">{{<span class=\"hljs-builtin-name\">in</span>.text}}</span><span class=\"xml\">\n            </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">attribute.name</span>}}</span><span class=\"xml\">\n          </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">t.d</span>}}</span><span class=\"xml\">\n          </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">t.d</span>}}</span><span class=\"xml\">\n            </span><span class=\"hljs-template-tag\">{{#<span class=\"hljs-name\">attribute.age</span> as |in|}}</span><span class=\"xml\">\n              </span><span class=\"hljs-template-variable\">{{<span class=\"hljs-builtin-name\">in</span>.text}}</span><span class=\"xml\">\n            </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">attribute.age</span>}}</span><span class=\"xml\">\n          </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">t.d</span>}}</span><span class=\"xml\">\n        </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">fm-form</span>}}</span><span class=\"xml\">\n      </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">t.r</span>}}</span><span class=\"xml\">\n    </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\"><span class=\"hljs-builtin-name\">each</span></span>}}</span><span class=\"xml\">\n  </span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">t.body</span>}}</span><span class=\"xml\">\n</span><span class=\"hljs-template-tag\">{{/<span class=\"hljs-name\">ui-table</span>}}</span><span class=\"xml\"></span>\n</code></pre>\n</div>",
+      "access": "public",
+      "tagname": "",
+      "methods": [],
+      "events": [],
+      "properties": []
+    },
+    "relationships": {
+      "parent-class": {
+        "data": null
+      },
+      "descendants": {
+        "data": []
+      },
+      "module": {
+        "data": {
+          "id": "form",
+          "type": "module"
+        }
+      },
+      "project-version": {
+        "data": {
+          "type": "project-version",
+          "id": "ember-ui-kit-0.11.2"
+        }
+      }
+    }
+  }
+}

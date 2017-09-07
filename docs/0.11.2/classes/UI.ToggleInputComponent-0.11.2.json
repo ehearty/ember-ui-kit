@@ -1,0 +1,57 @@
+{
+  "data": {
+    "id": "UI.ToggleInputComponent-0.11.2",
+    "type": "class",
+    "attributes": {
+      "name": "UI.ToggleInputComponent",
+      "shortname": "UI.ToggleInputComponent",
+      "classitems": [],
+      "plugins": [],
+      "extensions": [],
+      "plugin_for": [],
+      "extension_for": [],
+      "module": "input",
+      "namespace": "UI",
+      "file": "/Users/mliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-qPJzZSHO.tmp/components/in-toggle/component.js",
+      "line": 6,
+      "description": "<div class=\"docs-md\"><p><code>{{in-toggle}}</code> is a simple input component that respond\nto click to toggle. The implementation does not provide\nspecific styling. You are free style it in anyway you like:\nbutton, switch, or checkbox.</p>\n</div>",
+      "access": "public",
+      "tagname": "",
+      "methods": [],
+      "events": [],
+      "properties": [
+        {
+          "file": "/Users/mliu/Workspace/ember-ui-kit/tmp/docs_generator-input_base_path-qPJzZSHO.tmp/components/in-toggle/component.js",
+          "line": 39,
+          "access": "protected",
+          "tagname": "",
+          "itemtype": "property",
+          "name": "inputElement",
+          "class": "UI.ToggleInputComponent",
+          "module": "input",
+          "namespace": "UI"
+        }
+      ]
+    },
+    "relationships": {
+      "parent-class": {
+        "data": null
+      },
+      "descendants": {
+        "data": []
+      },
+      "module": {
+        "data": {
+          "id": "input",
+          "type": "module"
+        }
+      },
+      "project-version": {
+        "data": {
+          "type": "project-version",
+          "id": "ember-ui-kit-0.11.2"
+        }
+      }
+    }
+  }
+}
