@@ -7,4 +7,6 @@ export default function() {
   this.get('/comments/:id');
   this.get('/tags');
   this.get('/tags/:id');
+
+  this.passthrough('/write-coverage');
 }
