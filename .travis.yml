@@ -16,8 +16,6 @@ addons:
   chrome: stable
 
 env:
-  global:
-    - CC_TEST_REPORTER_ID=ae4c423a16bd3a9e7393d5610cea6e70aacfab71a8a17e0fb56d4c6ae684aac8
   matrix:
     # we recommend testing LTS's and latest stable release (bonus points to beta/canary)
     - EMBER_TRY_SCENARIO=ember-lts-2.4
@@ -38,14 +36,11 @@ matrix:
 
 before_install:
   - npm config set spin false
-  - npm install -g npm@4
+  - npm install -g npm@4 coveralls
   - npm --version
 
-before_script:
-  - .travis/test-reporter-latest-linux-amd64 before-build
-
 after_script:
-  - .travis/test-reporter-latest-linux-amd64 after-build
+  - cat coverage/lcov.info | coveralls
 
 script:
   # Usually, it's ok to finish the test scenario without reverting
