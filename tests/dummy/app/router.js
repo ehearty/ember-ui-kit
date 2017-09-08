@@ -46,6 +46,8 @@ Router.map(function() {
     this.route('components/x');
     this.route('components/x/component');
     this.route('components/x/resize');
+
+    this.route('deprecations');
   });
 });
 
