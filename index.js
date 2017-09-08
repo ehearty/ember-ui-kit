@@ -1,11 +1,13 @@
 /* jshint node: true */
 'use strict';
 
-var Merge = require('broccoli-merge-trees');
-var Funnel = require('broccoli-funnel');
-var stew = require('broccoli-stew');
+const Merge = require('broccoli-merge-trees');
+const Funnel = require('broccoli-funnel');
+const stew = require('broccoli-stew');
 
-var path = require('path');
+const path = require('path');
+
+const SVGSpriter = require('./lib/svg-spriter');
 
 module.exports = {
   name: 'ember-ui-kit',
@@ -46,7 +48,7 @@ module.exports = {
     //'ember-ui-kit/ui-position.css'
   ],
 
-  treeForVendor: function(tree) {
+  treeForVendor(tree) {
     return new Merge([].concat(tree || [], [
       this.treeForNodeModule('jquery-ui'),
       this.treeForNodeModule('jquery-mousewheel'),
@@ -56,7 +58,7 @@ module.exports = {
     ]));
   },
 
-  treeForAddon: function(tree) {
+  treeForAddon(tree) {
     return new Funnel(this._super(tree), {
       srcDir: '/',
       destDir: '/',
@@ -64,9 +66,9 @@ module.exports = {
     });
   },
 
-  treeForNodeModule: function(module) {
-    var fullPath = require.resolve(module);
-    var ui = path.join(fullPath.substring(0, fullPath.indexOf(module)), module);
+  treeForNodeModule(module) {
+    let fullPath = require.resolve(module);
+    let ui = path.join(fullPath.substring(0, fullPath.indexOf(module)), module);
 
     return new Funnel(ui, {
       destDir: module
@@ -86,10 +88,11 @@ module.exports = {
     });
   },
 
-  included: function(app) {
+  included: function(parent) {
     this._super.included.apply(this, arguments);
 
-    var addon = this;
+    let addon = this;
+    let icon = parent.registry.load('icon')[0];
 
     this.files
       .map(function(file) {
@@ -98,9 +101,27 @@ module.exports = {
       .forEach(function(path) {
         addon.import(path);
       });
+
+    parent.trees.public = new Merge([
+      parent.trees.public,
+      icon.toTree(new Funnel(parent.trees.app, {
+        srcDir: 'icons',
+        destDir: '.',
+        include: [ '**/*.svg' ]
+      }))
+    ]);
   },
 
   setupPreprocessorRegistry: function(type, registry) {
+    registry.add('icon', {
+      name: 'ember-ui-kit',
+      ext: 'svg',
+
+      toTree(tree) {
+        return new SVGSpriter(tree);
+      }
+    });
+
     registry.add('htmlbars-ast-plugin', {
       name: 'property-component',
       plugin: require('./lib/htmlbars-ast-plugin'),

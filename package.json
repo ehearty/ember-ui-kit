@@ -21,17 +21,19 @@
     "@html-next/vertical-collection": "^1.0.0-beta.7",
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^2.0.0",
+    "broccoli-stew": "^1.5.0",
     "element-resize-detector": "^1.1.10",
     "ember-cli-babel": "^6.7.1",
     "ember-cli-htmlbars": "^2.0.1",
-    "ember-cp-validations": "^3.2.4",
     "ember-cli-sass": "^7.0.0",
     "ember-concurrency": "^0.8.5",
+    "ember-cp-validations": "^3.2.4",
+    "jquery-mousewheel": "^3.1.13",
     "jquery-ui": "^1.12.1",
     "jquery-ui-touch-punch": "^0.2.3",
-    "jquery-mousewheel": "^3.1.13",
-    "broccoli-stew": "^1.5.0",
-    "perfect-scrollbar": "^0.7.0"
+    "klaw-sync": "^3.0.0",
+    "perfect-scrollbar": "^0.7.0",
+    "svg-sprite": "^1.3.7"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.2",
